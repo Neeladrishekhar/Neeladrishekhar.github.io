@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Neeladrishekhar Kanjilal</title>
+</head>
+<body>
+	<link type="text/css" rel="stylesheet" href="css/pageLoading.css">
+	<script type="text/javascript" src="js/pageLoading.js"></script>
+	<div id="someLoader" class="loading_page">
+		<div class="load_percentage">10%</div>
+		<canvas id="pageLoadCanvas"></canvas>
+	</div>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<div class="fullContainer">
+		<div id="left_full">
+			
+		</div>
+		<aside id="menu_full">
+			<div class="menu_top">
+				<div class="image_wrap">
+					<img src="img/just_face.jpg">
+				</div>
+				<div class="profile_info">
+					<h4>NEELADRISHEKHAR KANJILAL</h4>
+					<p>4<sup>th</sup> year B.Tech.</p>
+					<p>Computer Science & Engg.</p>
+					<p>IIT Bombay</p>
+				</div>
+			</div>
+			<div class="menu_seperator"></div>
+			<nav class="menu_nav" id="outside_nav">
+				<div id="inside_nav">
+					<a id="nav_about" class="selected_nav" onclick="select_article('about')">
+						<span class="menu_name">ABOUT</span>
+						<span class="fa fa-home"></span>
+					</a>
+					<a id="nav_academics" onclick="select_article('academics')">
+						<span class="menu_name">ACADEMICS</span>
+						<span class="fa fa-graduation-cap"></span>
+					</a>
+					<a id="nav_achievements" onclick="select_article('achievements')">
+						<span class="menu_name">ACHIEVEMENTS</span>
+						<span class="fa fa-trophy"></span>
+					</a>
+					<a id="nav_resume" onclick="select_article('resume')">
+						<span class="menu_name">RESUME</span>
+						<span class="fa fa-newspaper-o"></span>
+					</a>
+					<a id="nav_projects" onclick="select_article('projects')">
+						<span class="menu_name">PROJECTS</span>
+						<span class="fa fa-flask"></span>
+					</a>
+					<a id="nav_interests" onclick="select_article('interests')">
+						<span class="menu_name">INTERESTS</span>
+						<span class="fa fa-cogs"></span>
+					</a>
+					<a id="nav_canvas" onclick="select_article('canvas')">
+						<span class="menu_name">MY CANVAS</span>
+						<span class="fa fa-picture-o"></span>
+					</a>
+					<a id="nav_contacts" onclick="select_article('contacts')">
+						<span class="menu_name">CONTACTS</span>
+						<span class="fa fa-paper-plane"></span>
+					</a>
+				</div>
+			</nav>
+			<div class="menu_footer">
+				
+			</div>
+		</aside>
+		<div class="content_container">
+			<div class="header_container">
+				<div class="header">
+					
+				</div>
+			</div>
+			<div class="content_wrapper">
+				<article class="content selected_content" id="outside_about" onclick="select_article('about')">
+					<div class="content_div" id="inside_about">
+						<span class="content_icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.01</span>
+							<h2 class="inner_head">ABOUT</h2>
+							<span class="inner_title">PERSONAL DETAILS</span>
+							<div class="inner_container">
+								<div class="about_card">
+									<div class="about_details">
+										<div>
+											<span class="fa fa-inbox"></span>
+											<span class="detail">Neeladrishekhar29@gmail.com</span>
+										</div>
+										<div>
+											<span class="fa fa-phone"></span>
+											<span class="detail">+91 900 454 7172</span>
+										</div>
+									</div>
+									<div class="card_content_wrapper">
+										<span class="description">
+											hello I am a <strong id="rep_word"></strong><br>
+											I am passionate about  programming and coding<br>
+											Welcome to my personal and academic profile
+										</span>
+										<span class="status">
+											<span class="fa fa-circle"></span><span class="text">Available as <strong>STUDENT</strong></span>
+										</span>										
+									</div>
+								</div>
+								<div class="more_details">
+									<p class="title">BIO</p>
+									<p class="sub_title">ABOUT ME</p>
+									<span style="margin-left: 50px"></span>
+									I'm just an average teenager who has taken <b>21 circles around the Sun</b>, whose hometown is <b>Lonavla</b> within the Pune region. I am currently in my 4<sup>th</sup> year here at Indian Institute of Technology(IIT), Bombay pursuing a B.Tech. degree with Computer Science and Engineering department(CSE) as a major. I am also targeting to achieve a minor in Industrial Design Center(IDC) here at IIT.
+									<br><br>
+									Clearly my department being CSE, I spend a lot of time <b>coding</b>, that too in a variety of languages. I also love spending time doing mechanical/technical stuffs, like <b>robotics</b>. My primary field of interest in my department is <b>Graphics, Vision, Digital Geometry Processing,</b> etc. My hobby is <b>drawing and painting,</b> with significant interests in <b>3D modelling and Game development.</b>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content selected_content" id="outside_academics" onclick="select_article('academics')">
+					<div class="content_div" id="inside_academics">
+						<span class="content_icon"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.02</span>
+							<h2 class="inner_head">ACADEMICS</h2>
+							<span class="inner_title">EDUCATION</span>
+							<div class="inner_container">
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2018</span>
+											<div class="separator"></div>
+											<span>2014</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">COMPUTER SCIENCE & ENGINEERING - B.TECH.</h3>
+											<h4 class="card_content_subheader">INDIAN INSTITUTE OF TECHNOLOGY, BOMBAY <span><i class="fa fa-map-marker"></i> Mumbai</span> </h4>
+											Divided into 8 semesters with a majority of computer science courses while also covering introduction to electrical, quantum physics, economics and calculus. 
+										</div>
+									</div>
+								</div>
+								<button class="btn btn-xs btn-block" onclick="Buttons.handle_hide('extra-education')"><span class="fa fa-chevron-down extra-education"></span></button><div class="extra-education" style="display: none;">
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2014</span>
+											<div class="separator"></div>
+											<span>2012</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">RAJASTHAN BOARD (SCIENCES) - INTERMEDIATE/+2</h3>
+											<h4 class="card_content_subheader">Disha Delphi Global Sr. Sec. School, Kota<span><i class="fa fa-map-marker"></i> Kota</span> </h4>
+											Divided into 4 units with a majority of science courses of physics, chemistry and mathematics with english and hindi as the first 2 languages.
+										</div>
+									</div>
+								</div>
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2012</span>
+											<div class="separator"></div>
+											<span>2006</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">MAHARASHTRA BOARD - MATRICULATION</h3>
+											<h4 class="card_content_subheader">Don Bosco High School, Lonavla<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
+											Classes from 5<sup>th</sup> to 10<sup>th</sup> with major interests in Mathematics, Science and Arts. Language proficiency in English(primary), Hindi and Marathi.
+										</div>
+									</div>
+								</div>
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2006</span>
+											<div class="separator"></div>
+											<span>1999</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">PRIMARY AND NURSERY</h3>
+											<h4 class="card_content_subheader">St. Mary's Convent Shanti Sadan School, Lonavla<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
+											Kindergarten to class 4<sup>th</sup>. Finish off every thing for the education column.
+										</div>
+									</div>
+								</div></div>
+							</div>
+							<span class="inner_title">HONORS AND AWARDS</span>
+							<div class="inner_container">
+								<!-- <div class="two_part_card">
+										<div class="card_tag">
+											<span class="fa fa-graduation-cap"></span>
+											<div class="duration">
+												<span>2014</span>
+												<div class="separator"></div>
+												<span>2013</span>
+											</div>
+										</div>
+										<div class="card_container">
+											<div class="card_content">
+												<h3 class="card_content_header">INPhO GOLD MEDALIST</h3>
+												<h4 class="card_content_subheader">HOMI BHABHA CENTRE FOR SCIENCE EDUCATION<span><i class="fa fa-map-marker"></i> Mumbai</span> </h4>
+												For being in the top 35 students in Indian National Physics Olympiad, and participating in the qualification camp of 5 Indian representatives for International Physics Olympiad.
+											</div>
+										</div>
+								</div> -->
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2014</span>
+											<div class="separator"></div>
+											<span>2013</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">KVPY FELLOWSHIP</h3>
+											<h4 class="card_content_subheader">DEPARTMENT OF SCIENCE AND TECHNOLOGY<br> GOVERNMENT OF INDIA<span><i class="fa fa-map-marker"></i> New Delhi</span> </h4>
+											Awarded the Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship, for scoring well at its competitive exmination cum interview process. Stipend of 80,000{&#8377} per year.
+										</div>
+									</div>
+								</div>
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2010</span>
+											<div class="separator"></div>
+											<span>2009</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">IPM SCHOLARSHIP</h3>
+											<h4 class="card_content_subheader">ALL INDIA OPEN MATHEMATICS SCHOLARSHIP EXAMINATION<br> GOVERNMENT OF INDIA<span><i class="fa fa-map-marker"></i> Pune</span> </h4>
+											Awarded IPM scholarship for good performance in the All India Open Mathematics Scholarship Examination by the Institute for Promotion of Mathematics.
+										</div>
+									</div>
+								</div>
+								<button class="btn btn-xs btn-block" onclick="Buttons.handle_hide('extra-awards')"><span class="fa fa-chevron-down extra-awards"></span></button><div class="extra-awards" style="display: none;">
+								<div class="two_part_card">
+									<div class="card_tag">
+										<span class="fa fa-graduation-cap"></span>
+										<div class="duration">
+											<span>2012</span>
+											<div class="separator"></div>
+											<span>2011</span>
+										</div>
+									</div>
+									<div class="card_container">
+										<div class="card_content">
+											<h3 class="card_content_header">NAGAR PARISHAD AWARD</h3>
+											<h4 class="card_content_subheader">LONAVLA NAGAR PARISHAD<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
+											Awarded scholarship and trophies for being the City Topper in SSC Maharashtra Secondary State Board Examination, by the ruling government body of the city.
+										</div>
+									</div>
+								</div></div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_achievements" onclick="select_article('achievements')">
+					<div class="content_div" id="inside_achievements">
+						<span class="content_icon"><i class="fa fa-trophy fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.03</span>
+							<h2 class="inner_head">ACHIEVEMENTS</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_resume" onclick="select_article('resume')">
+					<div class="content_div" id="inside_resume">
+						<span class="content_icon"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.04</span>
+							<h2 class="inner_head">RESUME</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_projects" onclick="select_article('projects')">
+					<div class="content_div" id="inside_projects">
+						<span class="content_icon"><i class="fa fa-flask fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.05</span>
+							<h2 class="inner_head">PROJECTS</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_interests" onclick="select_article('interests')">
+					<div class="content_div" id="inside_interests">
+						<span class="content_icon"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.06</span>
+							<h2 class="inner_head">INTERESTS</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_canvas" onclick="select_article('canvas')">
+					<div class="content_div" id="inside_canvas">
+						<span class="content_icon"><i class="fa fa-picture-o fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.07</span>
+							<h2 class="inner_head">CANVAS</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="content" id="outside_contacts" onclick="select_article('contacts')">
+					<div class="content_div" id="inside_contacts">
+						<span class="content_icon"><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i></span>
+						<div class="inside_inner">
+							<span class="inner_before_title">.08</span>
+							<h2 class="inner_head">CONTACTS</h2>
+							<div class="inner_container">
+								
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/background.js"></script>
+</body>
+</html>
