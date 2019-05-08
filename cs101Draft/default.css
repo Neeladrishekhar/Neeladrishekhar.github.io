@@ -325,9 +325,17 @@ ul.style2 a:hover {
 	color: #FFFFFF;
 }
 
+table {
+	border-collapse: collapse;
+}
 
+th, td {
+	border: 2px solid;
+}
 
-
+td {
+	width: 13%;
+}
 
 
 
