@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person1.C<p><PRE>
+// My roll number is Person1
+// My screen name is Yibambe
+
+#include &lt;iostream&gt;
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match44-1.html#0" TARGET="1"><IMG SRC="../../bitmaps/tm_0_28.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+using namespace std;
+
+struct Point {
+    float x;
+    float y;
+};
+
+// write code for the function findCentroid()
+void findCentroid( Point one , Point two , Point three , Point &four) {
+    
+    four.x = one.x + two.x + three.x ;
+</FONT>    four.y = one.y + two.y + three.y ;
+
+    
+}
+
+int main () {
+    // read in 4 points and call findCentroid and print centroid coordinates
+    Point one , two , three , four ;
+    cin &gt;&gt; one.x &gt;&gt; one.y ;
+    cin &gt;&gt; two.x &gt;&gt; two.y ;
+    cin &gt;&gt; three.x &gt;&gt; three.y ;
+    findCentroid( one , two , three , four) ;
+    cout &lt;&lt; four.x/3.0 &lt;&lt; " " &lt;&lt; four.y/3.0 ;
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

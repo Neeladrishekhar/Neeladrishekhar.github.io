@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>170020108.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+170020108.C<p><PRE>
+// My roll number is (170020108)
+// My screen name is (Reyansh)
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main () {
+    int numberOfRows, numberOfColumns;
+<A NAME="1"></A><FONT color = #00FF00><A HREF="match0-1.html#1" TARGET="1"><IMG SRC="../../bitmaps/tm_1_34.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    cin &gt;&gt; numberOfRows &gt;&gt; numberOfColumns;
+    vector&lt;vector&lt;int&gt; &gt; matrix;
+    for (int i=0; i&lt;numberOfRows; i++){
+        vector&lt;int&gt; a;
+        for (int j=0; j&lt;numberOfColumns; j++){
+</FONT>        int x;
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match0-1.html#0" TARGET="1"><IMG SRC="../../bitmaps/tm_0_48.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+        cin&gt;&gt;x;
+        a.push_back(x);
+        }
+        matrix.push_back(a);
+}
+    
+    // enter  
+    for(int i=0;i&lt; numberOfColumns;i++){
+        for(int j=0; j&lt;numberOfRows;j++){
+            cout&lt;&lt;matrix[j][i]&lt;&lt;" ";
+            
+        }cout&lt;&lt;endl;
+    }
+    
+    return 0;
+</FONT>}</PRE>
+</PRE>
+</BODY>
+</HTML>

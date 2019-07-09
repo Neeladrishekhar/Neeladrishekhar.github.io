@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>150110030.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+180100113.C<p><PRE>
+// My roll number is (please complete)
+// My screen name is (please complete)
+
+#include &lt;iostream&gt;
+using namespace std;
+
+struct Point {
+    float x;
+    float y;
+};
+
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match20-0.html#0" TARGET="0"><IMG SRC="../../bitmaps/tm_0_25.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+void findCentroid ( float Point one, float Point two, float Point three,  Point &four )
+{
+four.x=( one.x + two.x + three.x)/3;
+four.y= (one.y + two.y + three.y)/3;
+</FONT>    
+}
+
+
+// write code for the function findCentroid()
+
+int main () {
+<A NAME="1"></A><FONT color = #00FF00><A HREF="match20-0.html#1" TARGET="0"><IMG SRC="../../bitmaps/tm_1_19.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    Point one, two, three, four;
+    cin&gt;&gt;one.x&gt;&gt;one.y;
+    cin&gt;&gt;two.x&gt;&gt;two.y;
+</FONT>    cin&gt;&gt;three.x&gt;&gt;three.y;
+    findCentroid(one, two, three, four);
+    cout&lt;&lt;four.x&lt;&lt;" "&lt;&lt;four.y&lt;&lt;end;
+    
+    // read in 4 points and call findCentroid and print centroid coordinates
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

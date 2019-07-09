@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>170070036.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+17D070015.C<p><PRE>
+// My roll number is 17D070015
+// My screen name is nihalsodhi
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+<A NAME="1"></A><FONT color = #00FF00><A HREF="match1-0.html#1" TARGET="0"><IMG SRC="../../bitmaps/tm_1_15.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+using namespace std;
+int main () {
+    int numberOfRows, numberOfColumns;
+    cin &gt;&gt; numberOfRows &gt;&gt; numberOfColumns;
+    vector&lt;vector&lt;int&gt; &gt; matrix;
+    vector&lt;vector&lt;int&gt; &gt; Tmatrix;
+</FONT><A NAME="0"></A><FONT color = #FF0000><A HREF="match1-0.html#0" TARGET="0"><IMG SRC="../../bitmaps/tm_0_17.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    for (int i=0; i&lt;numberOfRows; i++) matrix.push_back(vector&lt;int&gt;(numberOfColumns));
+    for (int i=0; i&lt;numberOfColumns; i++) Tmatrix.push_back(vector&lt;int&gt;(numberOfRows));
+</FONT>    int j=0, k=0;
+    for( j=0; j&lt;numberOfRows; j++){
+        for( k=0; k&lt;numberOfColumns; k++){
+            cin&gt;&gt;matrix[j][k];
+              }
+            }
+           
+   
+     for(k=0; k&lt;numberOfColumns; k++){
+        for(j=0; j&lt;numberOfRows; j++){
+            Tmatrix[k][j] = matrix[j][k]; 
+             cout&lt;&lt;Tmatrix[k][j]&lt;&lt;" ";
+            }
+            cout&lt;&lt;endl;
+        
+    }
+   
+    
+    
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

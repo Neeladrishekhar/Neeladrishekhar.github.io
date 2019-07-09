@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person2.C<p><PRE>
+// My roll number is Person2
+// My screen name is 2
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+
+void prime(int number, int i ){
+    i=1;
+    if(number==1) cout&lt;&lt;1;
+    if(number%2==0 && number!=2 && number&gt;1) i=0;
+    
+    if(i==1 && number&gt;1){
+        for(int k=2 ; k&lt;number ; k++){
+            if(number%k==0) i=0;
+        }
+    }
+    if(i==1 &&number&gt;1) cout&lt;&lt;number&lt;&lt;" "&lt;&lt;1;
+    else if(i==0 && number&gt;1){
+        int k=2;
+        int j=sqrt(number);
+        while(k&lt;j){
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match0-0.html#0" TARGET="0"><IMG SRC="../../bitmaps/tm_0_21.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+            if(number%k==0){
+            cout&lt;&lt;k&lt;&lt;" ";
+            number=number/k;
+            }
+            else{
+                k++;}
+        }
+        cout&lt;&lt;1;
+    }
+    
+}
+
+
+int main(){
+int n;
+cin&gt;&gt;n;
+prime(n,0);
+</FONT>    
+    
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

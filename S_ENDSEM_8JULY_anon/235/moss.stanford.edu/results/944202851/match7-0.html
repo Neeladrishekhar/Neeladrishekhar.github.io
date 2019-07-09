@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person1.C<p><PRE>
+// My roll number is (Person1)
+// My screen name is (BlueGod)
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main () {
+    int numberOfRows, numberOfColumns;
+    cin &gt;&gt; numberOfRows &gt;&gt; numberOfColumns;
+    vector&lt;vector&lt;int&gt; &gt; matrix;
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match7-1.html#0" TARGET="1"><IMG SRC="../../bitmaps/tm_0_43.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    vector&lt;int&gt; ans;
+    for (int i=0; i&lt;numberOfRows; i++) matrix.push_back(vector&lt;int&gt;(numberOfColumns));
+    for(int k=0;k&lt;numberOfRows;k++)
+    {
+        for(int l=0;l&lt;numberOfColumns;l++)
+</FONT>        {
+            ans.push_back(l);
+        }
+        cout &lt;&lt; ans[i] &lt;&lt; " " &lt;&lt; endl;
+    }
+    
+    // enter code here 
+    
+    
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

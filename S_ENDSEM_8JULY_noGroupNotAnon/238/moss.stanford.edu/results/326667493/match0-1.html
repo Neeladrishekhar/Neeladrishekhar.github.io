@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>170260033.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+17B080003.C<p><PRE>
+// My roll number is 17B080003
+// My screen name is Pepper
+
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+int main() {
+    bool found=0;
+    int numofpassword;
+    vector&lt;string&gt; password;
+    string malfunction;
+    string x;
+    cin&gt;&gt;numofpassword;
+   for(int i=0; i&lt;numofpassword;i++){
+       cin&gt;&gt;password[i];
+   } 
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match0-0.html#0" TARGET="0"><IMG SRC="../../bitmaps/tm_0_27.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    cin&gt;&gt;malfunction;
+    for (int i =0;i&lt;numofpassword;i++){
+     x = malfunction.find(password[i]);
+    if(x==password[i]){ found=1;
+</FONT>    cout&lt;&lt;password[i];}}
+    if (found==0) cout&lt;&lt;"INVALID STRING";
+    
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

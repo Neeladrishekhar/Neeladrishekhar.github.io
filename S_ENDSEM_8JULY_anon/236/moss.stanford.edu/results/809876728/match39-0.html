@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person1.C<p><PRE>
+// My roll number is (16d260006)
+// My screen name is (hacker#1)
+
+#include &lt;iostream&gt;
+using namespace std;
+
+struct Point {
+    float x;
+    float y;
+};
+
+double centroid1 ( float x1, float x2, float x3){
+    float coord;
+    coord =(x1+x2+x3)/ 3.0;
+    return coord;
+};
+double centroid2(float y1, float y2,float y3){
+    float term;
+    term=(y1+y2+y3)/3.0;
+    return term;
+}// write code for the function findCentroid()
+
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match39-1.html#0" TARGET="1"><IMG SRC="../../bitmaps/tm_0_35.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+int main () {
+    float x1,x2,x3,y1,y2,y3;
+    cin&gt;&gt;x1&gt;&gt;y1&gt;&gt;x2&gt;&gt;y2&gt;&gt;x3&gt;&gt;y3;
+    cout &lt;&lt;centroid1(x1,x2,x3)&lt;&lt;" "&lt;&lt;centroid2(y1,y2,y3);
+</FONT>    
+    
+    // read in 4 points and call findCentroid and print centroid coordinates
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>

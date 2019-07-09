@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person2.C<p><PRE>
+// My roll number is (Person2)
+// My screen name is (N.bharti)
+
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin&gt;&gt;N;
+    string password;
+    for(int i=0;i&lt;N;i++)
+    cin&gt;&gt;password[i];
+    string str;
+    getline(cin,str);
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match1-0.html#0" TARGET="0"><IMG SRC="../../bitmaps/tm_0_25.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+    bool found=true;
+    while(str.length()!=0){
+        for(int i=0;i&lt;N;i++){
+            if(str.find(password[i]&gt;=0)){
+</FONT>            found=true;
+            }
+        else break;}}
+        cout&lt;&lt;"INVALID STRING";
+        
+    
+        
+        if(found==true){
+            for(int i=0;i&lt;N;i++)
+            cout&lt;&lt;password[i]&lt;&lt;endl;
+        }
+        
+    }
+    //if(found==false)cout&lt;&lt;"INVALID STRING";
+    
+    
+    // enter code here
+    
+</PRE>
+</PRE>
+</BODY>
+</HTML>

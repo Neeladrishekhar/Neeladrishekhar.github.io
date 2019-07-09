@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>Person1.C</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<HR>
+Person1.C<p><PRE>
+// My roll number is (Person1)
+// My screen name is (Reyansh)
+
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+int main() {
+    
+    // enter code here
+    
+    int N;
+    cin&gt;&gt;N;
+    vector&lt;string&gt; pass(N);
+    string conc;
+    for(int i=0;i&lt;N;i++){cin&gt;&gt;pass[i];}
+    cin&gt;&gt;conc;
+    string copy= conc;
+<A NAME="0"></A><FONT color = #FF0000><A HREF="match1-1.html#0" TARGET="1"><IMG SRC="../../bitmaps/tm_0_20.gif" ALT="other" BORDER="0" ALIGN=left></A>
+
+     bool found= false;
+    while(copy.size()!=0){
+    for(int i=0;i&lt;N;i++){
+     if(copy.find(pass[i])==std::string::npos);
+</FONT>     else{found= true;
+         copy.erase(copy.find(pass[i]),pass[i].size());
+         cout&lt;&lt;pass[i]&lt;&lt;" ";}
+}
+        
+    }
+
+if(found==false)cout&lt;&lt;"INVALID STRING"&lt;&lt;endl;
+    
+    
+    
+    return 0;
+}</PRE>
+</PRE>
+</BODY>
+</HTML>
