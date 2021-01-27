@@ -23,7 +23,26 @@ body {
 	min-width: 32rem;
 }
 
+header {
+	position: absolute;
+	top: -25px;
+	width: 100%;
+	text-align: center;
+}
+
+footer {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+	text-align: center;
+}
+
+.imgLogo {
+	height: 50px;
+}
+
 main {
+	position: relative;
 	background-color: var(--defBackground);
 	max-width: 1200px;
 	margin: 50px auto;
