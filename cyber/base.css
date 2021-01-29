@@ -9,11 +9,14 @@ p {
 }
 
 :root {
+	/* --primaryBackground: #4e7c97; */
 	--primaryBackground: #15384C;
 	--headBackground: #CF4A41;
 	--headHighlight: #bb3b32;
-	--defBackground: #FFFFFF;
+	/* --defTextColor: #FFFFFF;
+	--defBackground: #000000; */
 	--defTextColor: #000000;
+	--defBackground: #FFFFFF;
 	--lightTextColor: #6f6f6f;
 }
 
@@ -112,6 +115,7 @@ main > nav > ul > li > a {
 
 main > nav > ul > li > a:hover {
 	transform: translate(0, -5px);
+	color: var(--defTextColor);
 }
 
 main > section article {
@@ -176,7 +180,7 @@ article#landing > p {
 }
 
 article#landing > p > strong, article#landing > p > a {
-	color: black;
+	color: var(--defTextColor);
 }
 
 article > h3 {
@@ -241,8 +245,13 @@ a.btn:hover {
 	background-color: var(--headHighlight);
 }
 
+article#contact > ul {
+	list-style: none;
+}
+
 article#contact > ul > li {
 	padding: 5px 0px;
+	vertical-align: middle;
 }
 
 article#contact > ul > li::before {
@@ -252,6 +261,84 @@ article#contact > ul > li::before {
 	height: 1px;
 	margin-bottom: 5px;
 	background-color: var(--lightTextColor);
+}
+i.fa-phone {
+	vertical-align: middle;
+	line-height: 2rem;
+	font-size: 1.8rem;
+	color: rgb(114, 167, 36);
+	margin-right: 0.8rem;
+	margin-top: 0.5rem;
+	animation: shake 2s infinite cubic-bezier(.36, .07, .19, .97) both;
+}
+i.fa-envelope {
+	vertical-align: middle;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	color: rgb(8, 133, 250);
+	margin-right: 0.2rem;
+	/* margin-top: 0.5rem; */
+}
+i.fa-map-marker {
+	vertical-align: middle;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	color: rgb(250, 125, 8);
+	margin-right: 0.5rem;
+	margin-top: -0.5rem;
+}
+
+.ringing_phone {
+  position: relative;
+}
+.ringing_phone:after,
+.ringing_phone:before {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  border-right: 2px solid blue;
+  width: 15px;
+  height: 15px;
+  left: -5%;
+  top: -5%;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+  animation: fadeInOne 2s infinite both;
+}
+.ringing_phone:before {
+  width: 20px;
+  height: 20px;
+  left: -5%;
+  top: -30%;
+  animation: fadeInTwo 2s infinite both;
+}
+
+@keyframes shake {
+	5%, 45%, 15%, 25%, 35% {
+		transform: rotate3d(0, 0, 1,-7deg) scale(1.4);
+	}
+	10%, 40%, 20%, 30% {
+		transform: rotate3d(0, 0, 1, 7deg) scale(1.4);
+	}
+	51%, 100% {
+		transform: rotate3d(0, 0, 0, 0deg) scale(1);
+	}
+}
+@keyframes fadeInOne {
+	45% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+@keyframes fadeInTwo {
+	55% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
 }
 
 table {
