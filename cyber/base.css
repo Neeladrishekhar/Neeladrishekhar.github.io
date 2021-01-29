@@ -155,6 +155,7 @@ a:hover {
 }
 
 article#landing > h2 {
+	color: var(--headBackground);
 	font-size: 2.2rem;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -184,7 +185,7 @@ article#landing > p > strong, article#landing > p > a {
 }
 
 article > h3 {
-	color: var(--primaryBackground);
+	color: var(--headBackground);
 	font-weight: 500;
 	font-size: 2.2rem;
 	text-transform: uppercase;
@@ -196,13 +197,92 @@ article#benefit > div.alternate {
 	font-size: 1.6rem;
 }
 
-div.alternate > div.altItem:nth-child(odd) {
+div.alternate > div.altItem {
+	border-top: 1px dotted var(--lightTextColor);
+	display: flex;
+	width: 100%;
+}
+
+div.alternate > div.altItem > span {
+	position: relative;
+}
+
+div.alternate > div.altItem > span > i {
+	font-size: 3rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+div.alternate > div.altItem > span.laptopAnim::before,
+div.alternate > div.altItem > span.laptopAnim::after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 6px;
+	border: 3px solid blueviolet;
+	border-radius: 50%;
+	top: 0.9rem;
+	left: 2rem;
+	animation: fadeInOne 2s infinite both;
+}
+div.alternate > div.altItem > span.laptopAnim::after {
+	width: 0;
+	border-radius: unset;
+	border: 2px solid blueviolet;
+	top: 1rem;
+	left: 2.8rem;
+	animation: fadeInTwo 2s infinite both;
+}
+
+div.alternate > div.altItem > span.cloudAnim {
+	animation: cloudy 10s infinite both;
+}
+@keyframes cloudy {
+	0%, 100% {
+		transform: translate(0,0) rotate3d(0, 0, 1,-7deg) scale(1);
+	}
+	25%, 75% {
+		transform: translate(1rem,0.5rem) rotate3d(0, 0, 0, 0deg) scale(0.5);
+	}
+	50% {
+		transform: translate(2rem,0) rotate3d(0, 0, 1, 7deg) scale(1);
+	}
+}
+
+div.alternate > div.altItem > span.lightAnim::before,
+div.alternate > div.altItem > span.lightAnim::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-right: 5px solid orange;
+	border-radius: 50%;
+	top: 0.3rem;
+	left: 1.7rem;
+	animation: fadeInOne 2s infinite both;
+}
+div.alternate > div.altItem > span.lightAnim::after {
+	left: 0.4rem;
+	transform: rotate(180deg);
+	animation: fadeInTwo 2s infinite both;
+}
+
+div.alternate > div.altItem:nth-child(4n-3) {
+	flex-direction: row-reverse;
+}
+div.alternate > p:nth-child(4n-2) {
 	text-align: right;
 }
 
 article#advantage > ul {
-	padding-inline-start: 40px;
 	font-size: 2rem;
+	list-style: none;
+}
+
+article#advantage > ul > li > strong > i {
+	width: 3rem;
+	margin-left: 1rem;
+	/* color: var(--headBackground); */
 }
 
 article#instr > p {
@@ -262,6 +342,7 @@ article#contact > ul > li::before {
 	margin-bottom: 5px;
 	background-color: var(--lightTextColor);
 }
+
 i.fa-phone {
 	vertical-align: middle;
 	line-height: 2rem;
@@ -271,48 +352,30 @@ i.fa-phone {
 	margin-top: 0.5rem;
 	animation: shake 2s infinite cubic-bezier(.36, .07, .19, .97) both;
 }
-i.fa-envelope {
-	vertical-align: middle;
-	line-height: 3rem;
-	font-size: 1.8rem;
-	color: rgb(8, 133, 250);
-	margin-right: 0.2rem;
-	/* margin-top: 0.5rem; */
-}
-i.fa-map-marker {
-	vertical-align: middle;
-	line-height: 3rem;
-	font-size: 1.8rem;
-	color: rgb(250, 125, 8);
-	margin-right: 0.5rem;
-	margin-top: -0.5rem;
-}
-
 .ringing_phone {
-  position: relative;
+	position: relative;
 }
 .ringing_phone:after,
 .ringing_phone:before {
-  position: absolute;
-  content: '';
-  opacity: 0;
-  border-right: 2px solid blue;
-  width: 15px;
-  height: 15px;
-  left: -5%;
-  top: -5%;
-  border-radius: 50%;
-  transform: rotate(-40deg);
-  animation: fadeInOne 2s infinite both;
+	position: absolute;
+	content: '';
+	opacity: 0;
+	border-right: 2px solid blue;
+	width: 15px;
+	height: 15px;
+	left: -5%;
+	top: -5%;
+	border-radius: 50%;
+	transform: rotate(-40deg);
+	animation: fadeInOne 2s infinite both;
 }
 .ringing_phone:before {
-  width: 20px;
-  height: 20px;
-  left: -5%;
-  top: -30%;
-  animation: fadeInTwo 2s infinite both;
+	width: 20px;
+	height: 20px;
+	left: -5%;
+	top: -30%;
+	animation: fadeInTwo 2s infinite both;
 }
-
 @keyframes shake {
 	5%, 45%, 15%, 25%, 35% {
 		transform: rotate3d(0, 0, 1,-7deg) scale(1.4);
@@ -338,6 +401,41 @@ i.fa-map-marker {
 	}
 	100% {
 		opacity: 1
+	}
+}
+  
+i.fa-envelope {
+	vertical-align: middle;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	color: rgb(8, 133, 250);
+	margin-right: 0.2rem;
+	animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	70% {
+		transform: scale(1.3);
+	}
+}
+
+i.fa-map-marker {
+	vertical-align: middle;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	color: rgb(250, 125, 8);
+	margin-right: 0.5rem;
+	margin-top: -0.5rem;
+	animation: drift 2s infinite;
+}
+@keyframes drift {
+	0%, 100% {
+		transform: translateX(-0.5rem);
+	}
+	50% {
+		transform: translateX(0.5rem);
 	}
 }
 
