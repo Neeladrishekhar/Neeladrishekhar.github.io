@@ -101,7 +101,9 @@
 				if (this.readyState != 4) return
 				if (this.status != 200) return
 				var tmpl = document.getElementsByTagName("template")[0]
-				document.documentElement.innerHTML = this.responseText
+				document.open("text/html", "replace")
+				document.write(this.responseText);
+				document.close();
 				var footer = document.getElementsByTagName("footer")[0]
 				footer.parentNode.insertBefore(tmpl.content.cloneNode(true), footer);
 
