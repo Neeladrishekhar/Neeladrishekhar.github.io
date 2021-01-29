@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<template>
+	</template>
+	<script>
+		window.onload = (event) => {
+			var xhr = new XMLHttpRequest()
+			xhr.open('GET', 'base.html', true)
+			xhr.onreadystatechange = function() {
+				if (this.readyState != 4) return
+				if (this.status != 200) return
+				var tmpl = document.getElementsByTagName("template")[0]
+				document.documentElement.innerHTML = this.responseText
+				var footer = document.getElementsByTagName("footer")[0]
+				footer.parentNode.insertBefore(tmpl.content.cloneNode(true), footer);
+
+				navLink = document.getElementsByClassName("homeLink")[0]
+				navLink.id = "selectedNav"
+				navLink.firstElementChild.setAttribute('href', "#");
+			}
+			xhr.send();
+		}
+	</script>
+</body>
+</html>

@@ -3,20 +3,25 @@ body, h1, h2, h3, ul {
 	padding: 0;
 }
 
+p {
+	/* letter-spacing: 1px; */
+	font-size: 1.3rem;
+}
+
 :root {
 	--primaryBackground: #15384C;
 	--headBackground: #CF4A41;
 	--headHighlight: #bb3b32;
 	--defBackground: #FFFFFF;
-	--defTextColor: #545454;
+	--defTextColor: #000000;
 	--lightTextColor: #6f6f6f;
 }
 
 body {
 	background-color: var(--primaryBackground);
 	min-height: 100vh;
-	font-family: 'Dosis', sans-serif;
-	font-size: 1rem;
+	/* font-family: 'Dosis', sans-serif; */
+	font-weight: 500;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -76,6 +81,12 @@ main > nav > h1 {
 	font-weight: 400;
 }
 
+main > nav > span {
+	text-transform: none;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
 main > nav > ul {
 	list-style: none;
 	display: flex;
@@ -128,15 +139,19 @@ div.above {
 }
 
 article a {
-	color: var(--defTextColor);
+	/* color: var(--defTextColor); */
+	color: var(--headBackground);
+	font-size: 1.2rem;
+	font-weight: 800;
 }
 
 a:hover {
+	color: var(--headHighlight);
 	text-decoration: none;
 }
 
 article#landing > h2 {
-	font-size: 1.9rem;
+	font-size: 2.2rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	padding-bottom: 1rem;
@@ -167,13 +182,14 @@ article#landing > p > strong, article#landing > p > a {
 article > h3 {
 	color: var(--primaryBackground);
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: 2.2rem;
 	text-transform: uppercase;
 }
 
 article#benefit > div.alternate {
 	display: flex;
 	flex-direction: column;
+	font-size: 1.6rem;
 }
 
 div.alternate > div.altItem:nth-child(odd) {
@@ -182,10 +198,16 @@ div.alternate > div.altItem:nth-child(odd) {
 
 article#advantage > ul {
 	padding-inline-start: 40px;
+	font-size: 2rem;
+}
+
+article#instr > p {
+	font-size: 1.5rem;
 }
 
 article#instr > p > a {
 	font-weight: 650;
+	font-size: 1.5rem;
 	color: var(--lightTextColor);
 }
 

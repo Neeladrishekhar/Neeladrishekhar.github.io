@@ -3,23 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cyber Academic Training</title>
-	<link rel="icon" href="imgs/logo.svg" type="image/svg+xml">
-	<link href="fontsGoogleapis.css" rel="stylesheet" type="text/css" />
-	<link href="base.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<main>
-		<header>
-			<img class="imgLogo" src="imgs/logo.svg" alt="Logo SVG">
-		</header>
-		<nav>
-			<h1>Cyber Academic Training</h1>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li id="selectedNav"><a href="#">Resources</a></li>
-			</ul>
-		</nav>
+	<template>
 		<section>
 			<article id="schedule">
 				<h3>Weekly schedule ({...Maybe...})</h3>
@@ -42,6 +28,14 @@
 							<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 						</tr>
 						<tr>
+							<th>9:00AM to 11:30AM</th>
+							<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
+							<th>12:30PM to 3:00PM</th>
+							<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
 							<th>4:00PM to 6:00PM</th>
 							<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 						</tr>
@@ -61,7 +55,7 @@
 				<ul>
 					<li>
 						<h3>Interested Applicants</h3>
-						<p>We sincerely request interested students/applicants to <a href="#">fill this form</a> to let us know</p>
+						<p>We sincerely request interested students/applicants to <a target="_blank" href="https://forms.gle/T1xdhUG8DSxyMVTb9">fill this form</a> to let us know</p>
 						<p>This form helps us in deciding the number of students that are interested in the facility being provided and also the various classes they belong to. We can also provide a convinient time slot for the classes that have more demand.</p>
 					</li>
 					<li>
@@ -69,15 +63,32 @@
 						<p>The tentative schedule for the facility is to start from 15<sup>th</sup> May 2019</p>
 					</li>
 					<li>
-						<h3>Instructor Info.</h3>
+						<h3>Faculty Info.</h3>
 						<p><a target="_blank" href="https://neeladrishekhar.github.io/">Neeladrishekhar</a> is an <a target="_blank" href="https://www.iitb.ac.in/">IIT Bombay</a> graduate from its <a target="_blank" href="https://www.cse.iitb.ac.in/">Computer Science Department</a></p>
 					</li>
 				</ul>
-				<a class="btn" href="#">Read more</a>
+				<!-- <a class="btn" href="#">Read more</a> -->
 			</article>
 		</section>
-		<footer>
-			<img class="imgLogo" src="imgs/logo.svg" alt="Logo SVG">
-		</footer>
-	</main>
+	</template>
+	<script>
+		window.onload = (event) => {
+			var xhr = new XMLHttpRequest()
+			xhr.open('GET', 'base.html', true)
+			xhr.onreadystatechange = function() {
+				if (this.readyState != 4) return
+				if (this.status != 200) return
+				var tmpl = document.getElementsByTagName("template")[0]
+				document.documentElement.innerHTML = this.responseText
+				var footer = document.getElementsByTagName("footer")[0]
+				footer.parentNode.insertBefore(tmpl.content.cloneNode(true), footer);
+
+				navLink = document.getElementsByClassName("resLink")[0]
+				navLink.id = "selectedNav"
+				navLink.firstElementChild.setAttribute('href', "#");
+			}
+			xhr.send();
+		}
+	</script>
 </body>
+</html>
