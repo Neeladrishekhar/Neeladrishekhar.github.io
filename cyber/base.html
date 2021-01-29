@@ -28,5 +28,24 @@
 			<img class="imgLogo" src="imgs/logo.svg" alt="Logo SVG">
 		</footer>
 	</main>
+	<script>
+		window.onload = (event) => {
+			doOnResize()
+		}
+		window.onresize = (event) => {
+			doOnResize()
+		}
+		function doOnResize() {
+			var windowWidth = window.innerWidth;
+			if (windowWidth < 512) {
+				console.log(windowWidth)
+				var ratioR = windowWidth/512
+				console.log(ratioR)
+				// document.getElementsByTagName("main")[0].style.transform = "scale("+ratioR.toString()+")"
+				ratioR = 100*ratioR
+				document.body.style.zoom = ratioR.toString()+"%"
+			}
+		}
+	</script>
 </body>
 </html>
