@@ -37,13 +37,16 @@
 		}
 		function doOnResize() {
 			var windowWidth = window.innerWidth;
-			console.log(windowWidth)
-			if (windowWidth < 512) {
-				var ratioR = windowWidth/512
+			var screenWidth = screen.width;
+			console.log(screenWidth, windowWidth)
+			if (screenWidth < windowWidth) {
+				var ratioR = screenWidth/windowWidth
 				console.log(ratioR)
 				// document.getElementsByTagName("main")[0].style.transform = "scale("+ratioR.toString()+")"
-				ratioR = 100*ratioR
-				document.body.style.zoom = ratioR.toString()+"%"
+				// document.body.style.transform = "scale("+ratioR.toString()+")"
+				document.body.style.zoom = ratioR
+			} else {
+				document.body.style.zoom = 1
 			}
 		}
 	</script>

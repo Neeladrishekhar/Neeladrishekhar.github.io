@@ -486,13 +486,22 @@ i.fa-map-marker {
 	}
 }
 
-table {
-	border-collapse: collapse;
-	margin-top: 1rem;
+article#schedule > div {
+	display: flex;
+	flex-wrap: wrap;
 }
-th, td {
-	border: 2px solid var(--primaryBackground);
+
+article#schedule > div > div > div {
+	font-size: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	background-color: var(--defTextColor);
+	text-align: center;
+	padding: 1px;
+	grid-gap: 1px;
+	min-width: 35rem;
 }
-td {
-	width: 13%;
+
+article#schedule > div > div > div > div {
+	background-color: var(--defBackground);
 }
