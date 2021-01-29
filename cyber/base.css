@@ -4,7 +4,6 @@ body, h1, h2, h3, ul {
 }
 
 p {
-	/* letter-spacing: 1px; */
 	font-size: 1.3rem;
 }
 
@@ -80,8 +79,12 @@ main > nav {
 }
 
 main > nav > h1 {
+	font-size: 3rem;
+	font-weight: 550;
+	letter-spacing: 0.1rem;
+}
+main > nav > h1 > span {
 	font-size: 2.4rem;
-	font-weight: 400;
 }
 
 main > nav > span {
@@ -143,7 +146,6 @@ div.above {
 }
 
 article a {
-	/* color: var(--defTextColor); */
 	color: var(--headBackground);
 	font-size: 1.2rem;
 	font-weight: 800;
@@ -285,7 +287,6 @@ article#advantage > ul {
 article#advantage > ul > li > strong > i {
 	width: 3rem;
 	margin-left: 1rem;
-	/* color: var(--headBackground); */
 }
 article#advantage > ul > li > strong > i.advs1 {
 	animation: onefourth 5s infinite both;

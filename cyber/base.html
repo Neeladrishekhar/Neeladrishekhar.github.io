@@ -17,7 +17,7 @@
 			<img class="imgLogo" src="imgs/logo.svg" alt="Logo SVG">
 		</header>
 		<nav>
-			<h1>LonaTown Tech Academia</h1>
+			<h1>L<span>ona</span>T<span>own</span> T<span>ech</span> A<span>cademia</span></h1>
 			<span>Take your next step towards the door, to choose your future, from this digital academic platform</span>
 			<ul>
 				<li class="homeLink"><a href="index.html">Home</a></li>
@@ -30,12 +30,12 @@
 	</main>
 	<script>
 		window.onload = (event) => {
-			doOnResize()
+			setUpZoomForScreen()
 		}
 		// window.onresize = (event) => {
-		// 	doOnResize()
+		// 	setUpZoomForScreen()
 		// }
-		function doOnResize() {
+		function setUpZoomForScreen() {
 			var windowWidth = window.innerWidth;
 			var screenWidth = screen.width;
 			console.log(screenWidth, windowWidth)
