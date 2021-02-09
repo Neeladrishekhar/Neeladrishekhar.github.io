@@ -1,356 +1,1275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Neeladrishekhar Kanjilal</title>
 </head>
 <body>
-	<!-- <link type="text/css" rel="stylesheet" href="css/pageLoading.css">
+	<style>
+		header {
+			width: 100%;
+			height: 100%;
+			background-color: #2b2f3a;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			left: 0;
+			z-index: 3;
+			transition: transform 1s ease-in;
+		}
+		header > h3 {
+			position: absolute;
+			width: 100%;
+			margin-top: 2rem;
+			color: rgba(255, 255, 255, 0.3);
+		}
+		header > canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<header>
+		<h3>Move your mouse or tap somewhere on screen to see effects</h3>
+		<canvas class="waterFlowCanvas running"></canvas>
+		<div id="loadPercent">5%</div>
+	</header>
 	<script type="text/javascript" src="js/pageLoading.js"></script>
-	<div id="someLoader" class="loading_page">
-		<div class="load_percentage">10%</div>
-		<canvas id="pageLoadCanvas"></canvas>
-	</div> -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<div class="fullContainer">
-		<div id="left_full">
-			
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/content.css">
+	<link rel="stylesheet" href="css/extra.css">
+
+	<main class="hideOver">
+		<nav>
+			<section>
+				<img src="img/just_face.jpg" alt="Neeladrishekhar portrait">
+				<h1>Neeladrishekhar Kanjilal</h1>
+				<h3>Ph.D.</br>Computer Science & Engg.</br><i class="fa fa-map-marker"></i>&nbsp;&nbsp; IIT Bombay</h3>
+			</section>
+			<ul>
+				<li class="selected">
+					<a href="#">about</a>
+					<i class="fa fa-home"></i>
+				</li>
+				<li>
+					<a href="#">academics</a>
+					<i class="fa fa-graduation-cap"></i>
+				</li>
+				<li>
+					<a href="#">achievements</a>
+					<i class="fa fa-trophy"></i>
+				</li>
+				<li>
+					<a href="#">resume</a>
+					<i class="fa fa-newspaper-o"></i>
+				</li>
+				<li>
+					<a href="#">projects</a>
+					<i class="fa fa-flask"></i>
+				</li>
+				<li>
+					<a href="#">interests</a>
+					<i class="fa fa-cogs"></i>
+				</li>
+				<li>
+					<a href="#">my canvas</a>
+					<i class="fa fa-picture-o"></i>
+				</li>
+				<li>
+					<a href="#">contact</a>
+					<i class="fa fa-paper-plane"></i>
+				</li>
+			</ul>
+		</nav>
+		<article id="priority">
+			<div class="priority-item">
+				You can see the initial loading screen on <a href="#waterFlow">My Canvas</a>
+			</div>
+			<div class="priority-item">
+			</div>
+		</article>
+		<div id="section-container">
+		<section id="about" class="selected">
+			<div class="indexHolder">.01</div>
+			<h2>about</h2>
+			<i class="fa fa-home"></i>
+			<article>
+				<h3>personal details</h3>
+				<div class="img-intro">
+					<img class="cover" src="img/cover.jpg" alt="cover image">
+					<div class="email-phone">
+						<div>
+							<i class="fa fa-inbox"></i>
+							<a href="mailto:neeladrishekhar@gmail.com">Neeladrishekhar@gmail.com</a>
+						</div>
+						<div>
+							<i class="fa fa-phone"></i>
+							<a href="tel:+919004547172">+91 900 454 7172</a>
+						</div>
+					</div>
+					<div class="statement">
+						<div class="info">
+							Hello, I am a <span id="whatAmI">programmer</span> </br>
+							I am passionate about programming and coding </br>
+							Welcome to my personal and academic profile
+						</div>
+						<div class="status">
+							Available as <span>freelancer</span>
+						</div>
+					</div>
+					<div class="location-card">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.7830226345773!2d73.42603904634784!3d18.741824187799953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDQ0JzMxLjgiTiA3M8KwMjUnNDEuNCJF!5e0!3m2!1sen!2sin!4v1612247131499!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						<div>
+							<i class="fa fa-map-marker"></i>
+							<a target="_blank" href="https://goo.gl/maps/SrLHwrgn9BB4pvNf8" >YamunaNiwas, Kusgaon, Lonavala</a>
+						</div>
+					</div>
+					<div class="location" onclick="imgIntroLocation()">
+						<a class="fa fa-map-marker"></a>
+					</div>
+				</div>
+				<div class="vertical-choice">
+					<div class="choices">
+						<a class="selected" href="#">info</a>
+						<a href="#">figures</a>
+						<a href="#">avocations</a>
+					</div>
+					<div class="content">
+						<h2>info</h2>
+						<h3>about me</h3>
+						I'm just an average teenager who has taken <b>24 circles around the Sun</b>, whose hometown is <b>Lonavla</b> within the Pune region. I am currently in Indian Institute of Technology<b>(I.I.T.)</b>, Bombay pursuing a <b>Ph.D.</b> degree at the Computer Graphics and Vision Lab(ViGIL) at the Computer Science and Engineering(C.S.E.) department. I am also pursuing <strong>Art & Design</strong> as my NSO major.
+						<br><div style="padding-bottom: 1rem;"></div>
+						Clearly my department being CSE, I spend a lot of time <b>coding</b>, that too in a variety of languages. I also love spending time doing mechanical/technical stuffs, like <b>robotics</b>. My primary field of interest in my department is <b>Graphics, Vision, Digital Geometry Processing,</b> etc. My hobby is <b>drawing and painting,</b> with significant interests in <b>3D modelling and Game development.</b>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="academics">
+			<div class="indexHolder">.02</div>
+			<h2>academics</h2>
+			<i class="fa fa-graduation-cap"></i>
+			<article>
+				<h3>Publication</h3>
+				<div class="name-time-tag">
+					<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+					<div class="name-time">
+						<div class="time">
+							<div><h1>22</h1>
+							<h2>DEC</h2>
+							<h3>2018</h3></div>
+						</div>
+						<div class="name">
+							<h2>Real-time Simulation of Human Musculature</h2>
+							<h3>Hyderabad - India<i class="fa fa-map-marker"></i></h3>
+							We present a reduced model based on Position Based Dynamics(PBD) for real-time simulation of human musculature. We demonstrate our methods on the muscles of the human arm.
+						</div>
+						<div class="detail">
+							<h2>Real-time Simulation of Human Musculature</h2>
+							<h3>Hyderabad - India<i class="fa fa-map-marker"></i></h3>
+							<div class="forIframe">
+							<iframe src="https://www.youtube.com/embed/-SYh3ZgB_vg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							Link to video showcasing results (<a target="_blank" href="https://youtu.be/-SYh3ZgB_vg">https://youtu.be/-SYh3ZgB_vg</a>) <br> <br>
+							We present a reduced model based on Position Based Dynamics(PBD) for real-time simulation of human musculature. We demonstrate our methods on the muscles of the human arm. Co-simulation of all the muscles of the human arm allow us to accurately track the development of stresses and strains in the muscles, when the arm is moved. We evaluate our method for accuracy by comparing it with gold standard simulation models based on finite volume methods, and demonstrate the stability of the method under flexion, extension and torsion. <br> <br>
+							Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2018), Hyderabad, India. <br>
+							Link to ACM digital library for this Conference's proceedings <a href="https://dl.acm.org/doi/10.1145/3293353.3293368" target="_blank">https://dl.acm.org/doi/10.1145/3293353.3293368</a>
+						</div>
+					</div>
+					<div class="tag">
+						<i style="background-color: #428bca;">Conference</i>
+						<i style="background-color: #2b303b;">Selected</i>
+						<div><strong>Neeladrishekhar Kanjilal</strong>, Parag Chaudhuri</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>Education</h3>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-graduation-cap"></i>
+						<div class="time">
+							<span>NOW</span>
+							<div class="sep"></div>
+							<span>2018</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Computer Science & Engineering - Ph.D.</h2>
+							<h3>Indian Institute of Technology, Bombay
+								<span class="location">Mumbai <i class="fa fa-map-marker"></i></span>
+							</h3>
+							Majorly involved in the field of Computer Graphics. Topics of research involve Physics based animations, Human muscle simulations, Hand tracking with physics, etc.
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-graduation-cap"></i>
+						<div class="time">
+							<span>2018</span>
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Computer Science & Engineering - B.Tech. (With Honors) {CGPA:<strong>8.07/10</strong>}</h2>
+							<h3>Indian Institute of Technology, Bombay
+								<span class="location">Mumbai <i class="fa fa-map-marker"></i></span>
+							</h3>
+							 Divided into 8 semesters with a majority of computer science courses while also covering introduction to electrical, quantum physics, economics and calculus.
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-graduation-cap"></i>
+						<div class="time">
+							<span>2014</span>
+							<div class="sep"></div>
+							<span>2012</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Rajasthan Board (Sciences) - Intermediate/+2 {Aggregate:<strong>92.00%</strong>}</h2>
+							<h3>Disha Delphi Global Sr. Sec. School, Kota
+								<span class="location">Kota <i class="fa fa-map-marker"></i></span>
+							</h3>
+							Divided into 4 units with a majority of science courses of physics, chemistry and mathematics with english and hindi as the first 2 languages.
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-graduation-cap"></i>
+						<div class="time">
+							<span>2012</span>
+							<div class="sep"></div>
+							<span>2006</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Maharashtra Board - Matriculation {Aggregate:<strong>92.00%</strong>}</h2>
+							<h3>Don Bosco High School, Lonavla
+								<span class="location">Lonavala <i class="fa fa-map-marker"></i></span>
+							</h3>
+							Classes from 5th to 10th with major interests in Mathematics, Science and Arts. Language proficiency in English(primary), Hindi and Marathi.
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-graduation-cap"></i>
+						<div class="time">
+							<span>2006</span>
+							<div class="sep"></div>
+							<span>1999</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Primary And Nursery</h2>
+							<h3>St. Mary's Convent Shanti Sadan School
+								<span class="location">Lonavala <i class="fa fa-map-marker"></i></span>
+							</h3>
+							Kindergarten to class 4th. Additionally exposure to National level competitive examinations like NTSE, IPM, etc. and extracurriculars like art, science projects, etc.
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="achievements">
+			<div class="indexHolder">.03</div>
+			<h2>achievements</h2>
+			<i class="fa fa-trophy"></i>
+			<article>
+				<h3>Scholastic</h3>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2><span>INPhO</span> Gold medalist</h2>
+							<h3>Homi Bhabha Centre for Science Education
+								<span class="location">Mumbai
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Awarded Gold Medal for being among the top 35 students in Indian National Physics Olympiad (INPhO)
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>All India Rank 6 in IIT JEE (Advanced)</h2>
+							<h3>India Institute of Technology, Kharagpur
+								<span class="location">India<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured <strong>All India Rank 6</strong> in IIT JEE (Advanced) SC category and All India Percentile Rank of <span title="All India Rank - 354">99.764%</span> in General category out of <strong>1.5 lakh</strong> candidates
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>State Rank 1 in JEE (Mains)</h2>
+							<h3>Central Board of Secondary Education
+								<span class="location">Rajasthan<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured a <strong>State Rank 1</strong> in IIT JEE (Mains) SC category and State Rank 20 in General category out of <strong>77 thousand</strong> candidates in Rajasthan
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>All India Rank 5 in IIT JEE (Mains)</h2>
+							<h3>Central Board of Secondary Education
+								<span class="location">India<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured an <strong>All India Rank 5</strong> in IIT JEE (Mains) SC category and All India Percentile Rank of <span title="All India Rank - 322">99.977%</span> in General category out of <strong>14 lakh</strong> candidates 
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2010</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Secured 98/100 in the finals of AIOMSE</h2>
+							<h3>Institute for Promotion of Mathematics
+								<span class="location">Pune<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured 98/100 in the finals of All India Open Mathematics Scholarship Examination (AIOMSE) conducted by Institute for Promotion of Mathematics (IPM)
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2007</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>All India Percentile Rank 92% in Emats</h2>
+							<h3>EMATS, Belgaum
+								<span class="location">Belgaum<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured All India Percentile Rank 92% in the All India General Knowledge Test conducted by EMATS in the Junior Category
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-star-half-o"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2009</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>Rank 40 in the mega finals of AIOMSE</h2>
+							<h3>Institute for Promotion of Mathematics
+								<span class="location">Pune<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Secured Rank 40 in the mega-finals of All India Open Mathematics Scholarship Examination (AIOMSE) conducted by Institute for Promotion of Mathematics (IPM)
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>Awards and Fellowships</h3>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-book"></i>
+						<div class="time">
+							<span>2014</span>
+							<div class="sep"></div>
+							<span>2013</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>KVPY Fellowship</h2>
+							<h3>Indian Institute of Science
+								<span class="location">Bangalore
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Awarded the Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship conducted by IISc, Bangalore, held by the Department of Science and Technology, Government of India
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-book"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>MHRD Scholarship</h2>
+							<h3>Rajasthan Board for Secondary Examination
+								<span class="location">Kota
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Offered MHRD Scholarship for scoring above 90% in Rajasthan Higher Secondary Examination. Secured city rank 11 in RBSE Intermediate/+2.
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-trophy"></i>
+						<div class="time">
+							<div class="sep"></div>
+							<span>2012</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>City Topper Awards</h2>
+							<h3>Maharashtra Secondary State Board Examination 
+								<span class="location">Lonavla
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Awarded Scholarship from Rotary club of Lonavla, Chaitanya Nagri Sahkari Pranstha and Lonavla Nagar Parishad for being City Topper in SSC Matriculation
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-book"></i>
+						<div class="time">
+							<span>2010</span>
+							<div class="sep"></div>
+							<span>2009</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<h2>IPM Scholarship</h2>
+							<h3>Institute for Promotion of Mathematics
+								<span class="location">Pune
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Awarded scholarship for very good performance in AIOMSE held by Institute for Promotion of Mathematics (IPM).
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="resume">
+			<div class="indexHolder">.04</div>
+			<h2>resume</h2>
+			<i class="fa fa-newspaper-o"></i>
+			<article>
+				<h3>Internships</h3>
+				<div class="name-time-tag">
+					<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+					<div class="name-time">
+						<div class="time">
+							<div>
+							<h1>'17</h1>
+							<h2>summer</h2>
+							<h3>3 months</h3>
+							</div>
+							<img src="img/daikin.png" alt="Daikin Logo">
+						</div>
+						<div class="name">
+							<h2>Production Line Data Analytics</h2>
+							<h3>Osaka, Japan<i class="fa fa-map-marker"></i></h3>
+							Primary task was to derive the parameters for the <strong>STREAMER unit</strong> assembly line at the Daikin(Shiga) factory, that were responsible for the defective units produced. Basic <strong>proficiency in speaking Japanese</strong> helped communication between the factory in Shiga where changes were needed and the Technology and Innovation Center in Osaka.
+						</div>
+						<div class="detail">
+							<h2>Production Line Data Analytics</h2>
+							<h3>Osaka - Japan<i class="fa fa-map-marker"></i></h3>
+							<div>
+								<img src="img/daikin.jpg" alt="Daikin workplace image">
+							</div>
+							<ol>
+							<li> Derived the parameters for the STREAMER unit assembly line at Daikin(Shiga) factory, that were responsible for the defective units produced, using <strong>Support Vector Regressions, Clustering, Boosted Trees</strong>, etc. based on past data</li>
+							<li> Because of my proficiency in <strong>speaking Japanese</strong> language, I was allowed to frequent between the factory in Shiga and the headquarter in Osaka for updating the changes required without any need for a dedicated translator.</li>
+							<li> Developed a <strong>Web-App using Flask</strong> for predicting when the production line instruments’ would fail based on updated data.</li>
+							</ol>
+						</div>
+					</div>
+					<div class="tag">
+						<i style="background-color: #2b303b;">Machine Learning</i>
+						<i style="background-color: #437fb5;">Python</i>
+						<i style="background-color: #61ac48;">Anaconda</i>
+						<i style="background-color: #e59237;">scikit-learn</i>
+						<i style="background-color: #3e7760;">Flask</i>
+						<div>In-charge: Haruo Kochi(Human Resource)</div>
+						<div><strong>DAIKIN Technology and Innovation Center, Osaka - Japan</strong></div>
+					</div>
+				</div>
+				<div class="name-time-tag">
+					<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+					<div class="name-time">
+						<div class="time">
+							<div>
+							<h1>'16</h1>
+							<h2>summer</h2>
+							<h3>3 months</h3>
+							</div>
+							<img src="img/wellthy.png" alt="Wellthy Therapeutics Logo">
+						</div>
+						<div class="name">
+							<h2>Lead Front-End Developer</h2>
+							<h3>Mumbai, India<i class="fa fa-map-marker"></i></h3>
+							Primary task was to develop a <strong>Web-Application platform</strong> for Copywriters, Doctors and Clinicals which they could use for <u>Content Creation and Submission</u> to the Board. The platform was also built for the Board to handle <u>Approvals, Rejections</u> as well as requests for <u>Updating and Reassignments</u> if any suggestion was made by the Board.
+						</div>
+						<div class="detail">
+							<h2>Lead Front-End Developer</h2>
+							<h3>Mumbai - India<i class="fa fa-map-marker"></i></h3>
+							<div>
+								<img src="img/wellthy.jpg" alt="Wellthy workplace image">
+							</div>
+							<ol>
+							<li>Developed a <strong>Web-App product</strong> for Copywriters, Doctors and Clinical for Content Creation, Submission, Approval, Rejection as well as Updating and Reassignment.</li>
+							<li>Primarily required coding expertise in Html, Css, Javascript and other derivatives like Scss, Jquery, Bootstrap, Mustache etc.</li>
+							<li>It was developed in the <u>spring framework</u> in java as a <strong>Maven Project</strong> and mostly was about JS & JSP for extensive user interface with simple java back-end.</li>
+							<li><strong>Conducted interviews myself</strong> for future possible front-end employees.</li>
+							<li>Also provided assistance in <strong>server side development</strong> which involves technologies such as Java, Spring, MariaDB and <strong>AWS technologies</strong> like DynamoDB, S3, Cognito, EC2 etc.</li>
+							</ol>
+						</div>
+					</div>
+					<div class="tag">
+						<i style="background-color: #222e3d;">Amazon Web Services</i>
+						<i style="background-color: #efd71e; color: black;">Javascript</i>
+						<i style="background-color: #4da4d8;">Css</i>
+						<i style="background-color: #e17330;">Html</i>
+						<i style="background-color: #2566a8;">jQuery</i>
+						<div>In-charge: Mayuresh Joshi (Tech. Team Leader)</div>
+						<div><strong>Wellthy Therapeutics Pvt Ltd, Nariman Point, Mumbai</strong></div>
+					</div>
+				</div>
+				<div class="name-time-tag">
+					<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+					<div class="name-time">
+						<div class="time">
+							<div>
+							<h1>'15</h1>
+							<h2>winter</h2>
+							<h3>2 months</h3>
+							</div>
+							<img src="img/zoomot.png" alt="Zoomot Services Logo">
+						</div>
+						<div class="name">
+							<h2>Application & Portal Developer</h2>
+							<h3>Mumbai, India<i class="fa fa-map-marker"></i></h3>
+							Mostly <strong>back-end(Java)</strong> development for the Android app used for <strong>Taxi Seat Booking Service</strong> as well as the <strong>Drivers’ App</strong> for the Taxis. The CoolShare backend service facilited parallel booking, rescheduling, offer/token usage, payment modes, etc. using <strong>MongoDb Database</strong>(NO-SQL).
+						</div>
+						<div class="detail">
+							<h2>Application & Portal Developer</h2>
+							<h3>Mumbai - India<i class="fa fa-map-marker"></i></h3>
+							<div>
+								<img src="img/zoomotTeam.jpeg" alt="Zoomot workplace image">
+							</div>
+							<div style="display: flex;">
+							<img style="max-width: 15%; align-self: center; padding: 1rem;" src="img/coolshare.jpg" alt="CoolShare logo">
+							<ol">
+							<li>Mostly <strong>back-end(java)</strong> development for creating the API needed by the <strong>Android based app</strong> for the <strong>Taxi Seat Booking Service</strong> as well as the <strong>Drivers’ App</strong> of the Taxi.</li>
+							<li>Also created the <strong>Portal Design</strong> for the <strong>Central Control Office</strong>, which was a UI for viewing/editing everyday schedules, assigning drivers, creating/updating taxi routes and stoping points, customer management, etc. mostly on <strong>HTML, CSS & JS</strong>.</li>
+							<li>The java code implemented parallel booking, rescheduling, offer/token usage, payment modes and many other customer services within <strong>NO-SQL(MongoDb) Database</strong> usage.</li>
+							</ol>
+							</div>
+						</div>
+					</div>
+					<div class="tag">
+						<i style="background-color: #2b2153;">Eclipse</i>
+						<i style="background-color: #569334;">mongoDB</i>
+						<i style="background-color: #dd4721;">Java</i>
+						<i style="background-color: #78d580; color: black;">Android</i>
+						<i style="background-color: #9068f7;">Bootstrap</i>
+						<i style="background-color: #9b2f0c;">Ruby</i>
+						<div>In-charge: Youmit Singh(Lead developer of IT Team)</div>
+						<div><strong>Zoomot Services (Cool Share platform), Mumbai</strong></div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>Positions of Responsibility</h3>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-university"></i>
+						<div class="time">
+							<span>2020</span>
+							<div class="sep"></div>
+							<span>2019</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+							<h2>Head Teaching Assistant</h2>
+							<h3>Computer Science 101 Course, IIT Bombay
+								<span class="location">Powai, Mumbai
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Organizing the software-labs, exams, tutorials and help sessions for the academic course which had approx 80 students
+							<div class="detail">
+								<h2>Head Teaching Assistant</h2>
+								<h3>Computer Science 101 Course, IIT Bombay</h3>
+								<h3>Powai, Mumbai <i class="fa fa-map-marker"></i></h3>
+								<ol>
+								<li>Entrusted with <strong>Organizing</strong> the software-labs, exams, tutorials and help sessions for the academic course which had approx 80 students.</li>
+								<li>The position also involved scheduling tasks and <strong>distributing the workload</strong> among the Teaching Assistants(TAs) assigned for the course.</li>
+								<li>Tasks like <strong>creating questions and exercises</strong> for the software-labs, quizzes and exams before every session on <strong>Prutor</strong> as well as organizing and maintaining all the students’ answer-sheets and marks were the primary tasks.</li>
+								<li>Handling plagiarism cases for assignments and exams was also a major task. We used the <strong>Moss(Measure Of Software Similarity) platform from Stanford</strong> for checking the same.</li>
+								<li>Conducting the <strong>initial selection process</strong> of the TAs for the course was also a task for the position.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-university"></i>
+						<div class="time">
+							<span>2012</span>
+							<div class="sep"></div>
+							<span>2011</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+							<h2>School Captain</h2>
+							<h3>Don Bosco High School & Jr. College
+								<span class="location">Lonavla, Pune
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Planning & Organizing all the events to be conducted for and by the School Section having approx 1500 students.
+							<div class="detail">
+								<h2>School Captain</h2>
+								<h3>Don Bosco High School & Jr. College</h3>
+								<h3>Lonavla, Pune <i class="fa fa-map-marker"></i></h3>
+								<ol>
+								<li>Entrusted with <strong>Planning & Organizing</strong> all the events to be conducted for and by the School Section having approx 1500 students.</li>
+								<li>Extra responsibilities because it was the <strong>Golden Jubilee</strong> year for my school.</li>
+								<li>Organized many <strong>Inter-School events</strong> for the <strong>first time</strong> like Seminars, Sports, Cultural and Quiz Competitions.</li>
+								<li>Made <strong>form filling</strong> for many popular state & national level competitive examinations <strong>available in school itself</strong>.</li>
+								<li>Organized After-School <strong>Training Classes</strong> for Competitive Examinations, thus invoking much better results by the School’s Students.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="time-location">
+					<div class="left">
+						<i class="fa fa-university"></i>
+						<div class="time">
+							<span>2012</span>
+							<div class="sep"></div>
+							<span>2010</span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="content">
+							<div class="expander" onclick="inflateOverlay(this)"><i class="fa fa-plus-circle"></i></div>
+							<h2>Scout Troop Leader</h2>
+							<h3>Don Bosco Scouts Association, Chatrapati Shivaji Unit
+								<span class="location">Lonavla, Pune
+								<i class="fa fa-map-marker"></i></span>
+							</h3>
+							Organizing all the Scouting Activities for our School’s Troop. We set a record for our school to be the first troop to have cleared upto 'RAJYA PURASKAR'(State Level Scout Exam).
+							<div class="detail">
+								<h2>Scout Troop Leader</h2>
+								<h3>Don Bosco Scouts Association, Chatrapati Shivaji Unit</h3>
+								<h3>Lonavla, Pune <i class="fa fa-map-marker"></i></h3>
+								<ol>
+								<li>Entrusted with <strong>Organizing</strong> all the <strong>Scouting Activities</strong> for our School’s Troop.</li>
+								<li>Introduced <strong>Scouting Examinations</strong> for the first time for my troop in the School.</li>
+								<li>My Troop <strong>Cleared till ’TRITIYA SOPAN’</strong>(District Level Scouting Examination) for the first time from my school.</li>
+								<li>Cleared <strong>’RAJYA PURASKAR’</strong>(State Level Scouting Examination).</li>
+								<li>We won <strong>2<sup>nd</sup> place in State-Level Troop March-Past Competition</strong> conducted at Aundh, Pune out of top-38 statelevel troops.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="projects">
+			<div class="indexHolder">.05</div>
+			<h2>projects</h2>
+			<i class="fa fa-flask"></i>
+			<article>
+				<h3>personalized</h3>
+				<div class="LR-holder">
+					<div class="LR-control">
+						<div class="info">
+							<div class="indexing">_ / _</div>
+							<div class="duration">
+								<i class="fa fa-calendar"></i>
+								Duration : <span></span>
+							</div>
+						</div>
+						<div class="left-dir" onclick="LRcontrol(this)">
+							<i class="fa fa-chevron-left"></i>
+						</div>
+						<div class="right-dir" onclick="LRcontrol(this, true)">
+							<i class="fa fa-chevron-right"></i>
+						</div>
+					</div>
+					<div class="LR-wrap">
+						<div class="title-content look">
+							<div class="duration">
+								April '17 - April '18
+							</div>
+							<div class="title">
+								<h2>Bachelor’s Technical Project</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Guide: Prof. Parag Chaudhuri</h4>
+							</div>
+							<div class="content">
+								<ul>
+								<li>The project is based on creating <strong>Biological simulations of human anatomy</strong> using Character animation from motion captures, etc.</li>
+								<li>Finite Volume Method(FVM) and Position Based Dynamics(PBD) using Shape Matching were the two methods implemented for simulation of human muscles</li>
+								<li>The publication mentioned previously is an A.C.M. approved extension of this project. <a href="https://www.cse.iitb.ac.in/~paragc/research/basicmuscle/" target="_blank">Link to project page</a></li>
+								</ul>
+								<div class="tag">
+									<i>Graphics</i>
+									<i style="background-color: #10437e;">C/C++</i>
+									<i style="background-color: #972f1f;">GLFW</i>
+									<i style="background-color: #53829f;">OpenGL</i>
+									<i>Physics</i>
+									<i style="background-color: #dd4727;">OpenCL</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								February '17 - April '17
+							</div>
+							<div class="title">
+								<h2>Foetal Heart Rate Monitor</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Guide: Prof. Preeti Rao</h4>
+							</div>
+							<div class="content">
+								<ul>
+								<li>Built <strong>android application to plot heart rate</strong> of foetus by taking audio input in real time with foetal doppler.</li>
+								<li>Implemented multithreaded model to record and process audio input, segment input in windows and plot processed data in <strong>real time</strong> on the screen.</li>
+								</ul>
+								<div class="tag">
+									<i>Audio Processing</i>
+									<i style="background-color: #78d580; color: black;">Android</i>
+									<i style="background-color: #dd4721;">Java</i>
+									<i style="background-color: #437fb5;">Python</i>
+									<i style="background-color: #e59237;">scikit-learn</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								April '15 - June '15
+							</div>
+							<div class="title">
+								<h2>Hand Movement Controlled Bot</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Institute Technical Summer Project</h4>
+							</div>
+							<div class="content">
+								<ul>
+								<li>Made a complex <strong>Muscle Force Detector</strong> circuit using <strong>IC 'UA-741'($0.15)</strong> (Used in small loudspeakers) and <strong>ECG electrodes</strong> instead of the usually used <strong>IC 'INA-106'($5)</strong> for controlling the movement.</li>
+								<li>Used <strong>ARDUINO-UNO</strong> microprocessor and transmitted using <strong>Simple R-F Module</strong> for making the bot wireless.</li>
+								<li>Attached a <strong>GYROSCOPE</strong> using an <strong>overly damped PENDULUM</strong> to the hand for getting other complex Hand Movements.</li>
+								</ul>
+								<div class="tag">
+									<i>Hardware</i>
+									<i style="background-color: #4b9397;">ARDUINO-UNO</i>
+									<i style="background-color: #8e2c27;">LTspice</i>
+									<i style="background-color: #10437e;">C/C++</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								June '14 - August '14
+							</div>
+							<div class="title">
+								<h2>Line Follower Bot</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Students Technical Activities Body</h4>
+							</div>
+							<div class="content">
+								<ul>
+								<li>Created a complex <strong>IR emitter and receiver circuit</strong> for detecting the position of the white line on a black background w.r.t the bot.</li>
+								<li>The algorithm for self correction of the position of the bot was coded in an <strong>ARDUINO UNO</strong> microprocessor.</li>
+								<li>The bot was <strong>3<sup>rd</sup> fastest</strong> in the tournament conducted by STAB with a <strong>gap of 0.5 sec</strong> from the fastest bot.</li>
+								</ul>
+								<div class="tag">
+									<i>Hardware</i>
+									<i style="background-color: #4b9397;">ARDUINO</i>
+									<i style="background-color: #10437e;">C / C# / C++</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>Course work</h3>
+				<div class="LR-holder">
+					<div class="LR-control small">
+						<div class="info">
+							<div class="indexing">_ / _</div>
+							<div class="duration">
+								<i class="fa fa-calendar"></i>
+								Duration : <span></span>
+							</div>
+						</div>
+						<div class="left-dir" onclick="LRcontrol(this)">
+							<i class="fa fa-chevron-left"></i>
+						</div>
+						<div class="right-dir" onclick="LRcontrol(this, true)">
+							<i class="fa fa-chevron-right"></i>
+						</div>
+					</div>
+					<div class="LR-wrap small">
+						<div class="title-content look">
+							<div class="duration">
+								January '16 - April '16
+							</div>
+							<div class="title">
+								<h2>2D Game Solver A.I.</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Prof. Ganesh Ramakrishnan</h4>
+							</div>
+							<div class="content">
+								Out of the 3 game solving AIs developed, one was <strong>Mario Brothers</strong> implemented in java. Other 2 were self-developed games of <i>steering a car</i> and <i>avoiding the falling blocks</i>, coded in python using pygame library. The AI implemented <strong>Neural Networks</strong>, and <strong>best K-ary method</strong> as solvers.
+								<div class="tag">
+									<i>Artificial Intelligence</i>
+									<i style="background-color: #dd4721;">Java</i>
+									<i style="background-color: #437fb5;">Python</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								July '15 - September '15
+							</div>
+							<div class="title">
+								<h2>Branch Change Portal</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Prof. Sharat Chandran</h4>
+							</div>
+							<div class="content">
+								A Web App developed within the <strong>Django framework(python-front, MYSQL-database)</strong>. Users could add branch choices and update them. An algorithm for final allocation ensured student-satisfactory result while maintaining the Institute policies of Batch strength & CPI.
+								<div class="tag">
+									<i>Full Stack Development</i>
+									<i style="background-color: #1d3d2d;">django</i>
+									<i style="background-color: #437fb5;">Python</i>
+									<i style="background-color: #dd8a09;">MySQL</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								February '17 - April '17
+							</div>
+							<div class="title">
+								<h2>Mean Shift Tracking</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Prof. Ajit Rajwade</h4>
+							</div>
+							<div class="content">
+								Created a working model for real-time tracking of non-rigid objects seen from a moving camera with the central computational module being based on mean shift iterations. The code was developed in python using the opencv library also including real time web-cam inputs.
+								<div class="tag">
+									<i>Image Processing</i>
+									<i style="background-color: #437fb5;">Python</i>
+									<i style="background-color: #88280d;">Matlab</i>
+									<i style="background-color: #4ea1c7;">Octave</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								October '15 - January '16
+							</div>
+							<div class="title">
+								<h2>SDN Controller</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Prof. Supratik Chakraborty</h4>
+							</div>
+							<div class="content">
+								Made a Software Defined Network(SDN) under the Digital-Logic-Design Lab. Code was simulated in Xilinx ISE and showed great Latency & Throughput for the network. Statistics, Host Tracking, Traffic controlling, Switch management and other Service abstractions were demonstrated.
+								<div class="tag">
+									<i>Networking</i>
+									<i style="background-color: #8d8b24;">Xilinx ISE</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								January '16
+							</div>
+							<div class="title">
+								<h2>Parallel Socket Programmed Server</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Prof. Kameswari Chebrolu</h4>
+							</div>
+							<div class="content">
+								Created a server that can distribute its workload into multiple worker taged computers connected to it. Using <strong>C++, multiple client handling, adding and removing workers & distribution of workload</strong> to improve performance were implemented.
+								<div class="tag">
+									<i>Networking</i>
+									<i style="background-color: #10437e;">C/C++</i>
+									<i style="background-color: #36142c;">Terminal</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								August '15 - September '15
+							</div>
+							<div class="title">
+								<h2>Rube Goldberg Machine Simulation</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Sharat Chandran</h4>
+							</div>
+							<div class="content">
+								Formulated a <strong>Coffee Maker</strong> styled Rube Goldberg Machine using the Physics Simulation Engine, <strong>Box2D in C++</strong>. The simulation iteratively creates a mixture of coffee-beans, water & sugar using mechanical devices. Simulated the model of a pendulum, coffee beans and drops of water.
+								<div class="tag">
+									<i>2D Physics Simulation</i>
+									<i style="background-color: #d64630;">Box2D</i>
+									<i style="background-color: #10437e;">C/C++</i>
+								</div>
+							</div>
+						</div>
+						<div class="title-content">
+							<div class="duration">
+								August '14 - September '14
+							</div>
+							<div class="title">
+								<h2>Quantum Tic-Tac-Toe</h2>
+								<h3>IIT Bombay <i class="fa fa-map-marker"></i></h3>
+								<h4>Instructor: Deepak B Phatak</h4>
+							</div>
+							<div class="content">
+								Developed a program using the <strong>Simplecpp graphics library</strong> developed by Prof. Abhiram Ranade (CSE, IITB) that allows user to play a two player Quantum Tic-Tac-Toe. The User gives the <strong>size</strong> of the Play-Board and sets the <strong>length-rule</strong> for a successful line thus increasing <strong>user interactivity</strong>.
+								<div class="tag">
+									<i>Game Development</i>
+									<i style="background-color: #10437e;">C/C++</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="interests">
+			<div class="indexHolder">.06</div>
+			<h2>interests</h2>
+			<i class="fa fa-cogs"></i>
+			<article>
+				<h3>Computer Graphics</h3>
+				<div class="content">
+					This being my primary research field, the amount of expertise and interest definitely exceeds others and is easily my strongest point. Topics like Physics based Animations, Graphics Card Computation, 3D Rendering, Computer Vision, Image Processing, etc. form a part of it.
+					<div class="skill">
+						<div class="amount">90%</div>
+						<div class="info">
+							<div class="level">
+								<div><i class="fa fa-bar-chart"></i> level : expert</div>
+								<div><i class="fa fa-briefcase"></i> exploit : 4 years</div>
+							</div>
+							<div class="fillbar"><div class="bar"></div></div>
+							<div class="skillTag">
+								<i>OpenGL</i>
+								<i>OpenCL</i>
+								<i>Simulations</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>App / Web Development</h3>
+				<div class="content">
+					Because of the combination of my interests in graphics and expertise in coding, web becomes the most relatable field. Services like Firebase allow full stack development possible directly in Front-End
+					<div class="skill">
+						<div class="amount">80%</div>
+						<div class="info">
+							<div class="level">
+								<div><i class="fa fa-bar-chart"></i> level : Intermediate</div>
+								<div><i class="fa fa-briefcase"></i> exploit : 5 years</div>
+							</div>
+							<div class="fillbar"><div class="bar"></div></div>
+							<div class="skillTag">
+								<i>Html</i>
+								<i>CSS</i>
+								<i>JS</i>
+								<i>Android</i>
+								<i>Server</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h3>Game Development</h3>
+				<div class="content">
+					A relatively new field for me, that needs Artistic and Programming skills. 
+					<div class="skill">
+						<div class="amount">20%</div>
+						<div class="info">
+							<div class="level">
+								<div><i class="fa fa-bar-chart"></i> level : beginner</div>
+								<div><i class="fa fa-briefcase"></i> exploit : 1 year</div>
+							</div>
+							<div class="fillbar"><div class="bar"></div></div>
+							<div class="skillTag">
+								<i>Godot</i>
+								<i>Blender</i>
+								<i>LMMS</i>
+								<i>Krita</i>
+								<i>GIMP</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="my canvas">
+			<div class="indexHolder">.07</div>
+			<h2>my canvas</h2>
+			<i class="fa fa-picture-o"></i>
+			<article>
+				<div id="waterFlow">
+					<img src="img/flowCanvas.png" alt="page loading canvas">
+					<div class="darken"></div>
+					<h2>water flow</h2>
+					<div class="more" onclick="inflateCanvasOverlay(this)"></div>
+					<link rel="stylesheet" href="css/waterFlow.css">
+					<script type="text/javascript" src="js/waterFlow.js"></script>
+					<template>
+						<div class="waterFlowWrap">
+							<h3>Move your mouse and click/tap somewhere on screen to see effects</h3>
+							<canvas class="waterFlowCanvas"></canvas>
+						</div>	
+					</template>
+				</div>
+				<div id="clock">
+					<link rel="stylesheet" href="css/clock.css">
+					<div class="clock-time">
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+						:
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+						:
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+						<div>
+							<div class="f" data-nv="1"></div>
+							<div class="b" data-nv="1"></div>
+						</div>
+					</div>
+					<canvas class="clockCanvas running"></canvas>
+					<script type="text/javascript" src="js/clock.js"></script>
+					<div class="darken"></div>
+					<h2>clock</h2>
+					<div class="more" onclick="inflateCanvasOverlay(this)"></div>
+					<template>
+						<div class="clockWrap"><div>
+							<div class="clock-time">
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+								:
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+								:
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+								<div>
+									<div class="f" data-nv="1"></div>
+									<div class="b" data-nv="1"></div>
+								</div>
+							</div>
+							<canvas class="clockCanvas"></canvas>
+						</div></div>
+					</template>
+				</div>
+				<div id="pingPong">
+					<img src="img/pingPong.png" alt="ping pong game canvas">
+					<div class="darken"></div>
+					<h2>Ping Pong</h2>
+					<div class="more" onclick="inflateCanvasOverlay(this)"></div>
+					<link rel="stylesheet" href="css/pingPong.css">
+					<script type="text/javascript" src="js/pingPong.js"></script>
+					<template>
+						<div class="pingPongWrap">
+							<select name="mode" class="ping-pong-portriat running">
+								<option value="portrait">Portrait</option>
+								<option value="landscape">Landscape</option>
+							</select>
+							<canvas class="ping-pong"></canvas>
+						</div>
+						<a target="_blank" href="pingPong.html"><i class="fa fa-share"></i></a>	
+					</template>
+				</div>
+				<div id="quadTree">
+					<img src="img/quadTree.png" alt="quadtree collision optimization">
+					<div class="darken"></div>
+					<h2>Quad Tree</h2>
+					<div class="more" onclick="inflateCanvasOverlay(this)"></div>
+					<template>
+						<iframe width="100%" height="100%" src="quadTree.html" frameborder="0"></iframe>
+						<a target="_blank" href="quadTree.html"><i class="fa fa-share"></i></a>	
+					</template>
+				</div>
+				<div id="graphViewer">
+					<img src="img/graphViewer.png" alt="SVG Graph Viewer">
+					<div class="darken"></div>
+					<h2>SVG Graph Viewer</h2>
+					<div class="more" onclick="inflateCanvasOverlay(this)"></div>
+					<template>
+						<iframe width="100%" height="100%" src="graphViewer/index.html" frameborder="0"></iframe>
+						<a target="_blank" href="graphViewer/index.html"><i class="fa fa-share"></i></a>	
+					</template>
+				</div>
+			</article>
+		</section>
+		<section id="contact">
+			<div class="indexHolder">.08</div>
+			<h2>contact</h2>
+			<i class="fa fa-paper-plane"></i>
+			<article>
+				<h1>Get in Touch<br></h1>
+				<h2>I will try my best to assist you</h2>
+				<h4>Simply use the form below to get in touch with me</h4>
+				<div>
+					<div class="info"></div>
+					<input id="msg_name" type="text" name="name" placeholder="NAME">
+					<input id="msg_email" type="email" name="email" placeholder="EMAIL">
+					<textarea id="msg_msg" name="message" cols="30" rows="5" placeholder="MESSAGE"></textarea>
+					<input type="submit" value="send message" onclick="sendMessage(this)">
+					<div class="loading">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</article>
+		</section>
 		</div>
-		<aside id="menu_full">
-			<div class="menu_top">
-				<div class="image_wrap">
-					<img src="img/just_face.jpg">
+		<section id="overlay">
+			<section class="content-holder">
+				<div class="expander" onclick="deflateOverlay()"><i class="fa fa-close"></i></div>
+				<div class="content">
 				</div>
-				<div class="profile_info">
-					<h4>NEELADRISHEKHAR KANJILAL</h4>
-					<p>4<sup>th</sup> year B.Tech.</p>
-					<p>Computer Science & Engg.</p>
-					<p>IIT Bombay</p>
-				</div>
-			</div>
-			<div class="menu_seperator"></div>
-			<nav class="menu_nav" id="outside_nav">
-				<div id="inside_nav">
-					<a id="nav_about" class="selected_nav" onclick="select_article('about')">
-						<span class="menu_name">ABOUT</span>
-						<span class="fa fa-home"></span>
-					</a>
-					<a id="nav_academics" onclick="select_article('academics')">
-						<span class="menu_name">ACADEMICS</span>
-						<span class="fa fa-graduation-cap"></span>
-					</a>
-					<a id="nav_achievements" onclick="select_article('achievements')">
-						<span class="menu_name">ACHIEVEMENTS</span>
-						<span class="fa fa-trophy"></span>
-					</a>
-					<a id="nav_resume" onclick="select_article('resume')">
-						<span class="menu_name">RESUME</span>
-						<span class="fa fa-newspaper-o"></span>
-					</a>
-					<a id="nav_projects" onclick="select_article('projects')">
-						<span class="menu_name">PROJECTS</span>
-						<span class="fa fa-flask"></span>
-					</a>
-					<a id="nav_interests" onclick="select_article('interests')">
-						<span class="menu_name">INTERESTS</span>
-						<span class="fa fa-cogs"></span>
-					</a>
-					<a id="nav_canvas" onclick="select_article('canvas')">
-						<span class="menu_name">MY CANVAS</span>
-						<span class="fa fa-picture-o"></span>
-					</a>
-					<a id="nav_contacts" onclick="select_article('contacts')">
-						<span class="menu_name">CONTACTS</span>
-						<span class="fa fa-paper-plane"></span>
-					</a>
-				</div>
-			</nav>
-			<div class="menu_footer">
-				
-			</div>
-		</aside>
-		<div class="content_container">
-			<div class="header_container">
-				<div class="header">
-					
-				</div>
-			</div>
-			<div class="content_wrapper">
-				<article class="content selected_content" id="outside_about" onclick="select_article('about')">
-					<div class="content_div" id="inside_about">
-						<span class="content_icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.01</span>
-							<h2 class="inner_head">ABOUT</h2>
-							<span class="inner_title">PERSONAL DETAILS</span>
-							<div class="inner_container">
-								<div class="about_card">
-									<div class="about_details">
-										<div>
-											<span class="fa fa-inbox"></span>
-											<span class="detail">Neeladrishekhar29@gmail.com</span>
-										</div>
-										<div>
-											<span class="fa fa-phone"></span>
-											<span class="detail">+91 900 454 7172</span>
-										</div>
-									</div>
-									<div class="card_content_wrapper">
-										<span class="description">
-											hello I am a <strong id="rep_word"></strong><br>
-											I am passionate about  programming and coding<br>
-											Welcome to my personal and academic profile
-										</span>
-										<span class="status">
-											<span class="fa fa-circle"></span><span class="text">Available as <strong>STUDENT</strong></span>
-										</span>										
-									</div>
-								</div>
-								<div class="more_details">
-									<p class="title">BIO</p>
-									<p class="sub_title">ABOUT ME</p>
-									<span style="margin-left: 50px"></span>
-									I'm just an average teenager who has taken <b>21 circles around the Sun</b>, whose hometown is <b>Lonavla</b> within the Pune region. I am currently in my 4<sup>th</sup> year here at Indian Institute of Technology(IIT), Bombay pursuing a B.Tech. degree with Computer Science and Engineering department(CSE) as a major. I am also targeting to achieve a minor in Industrial Design Center(IDC) here at IIT.
-									<br><br>
-									Clearly my department being CSE, I spend a lot of time <b>coding</b>, that too in a variety of languages. I also love spending time doing mechanical/technical stuffs, like <b>robotics</b>. My primary field of interest in my department is <b>Graphics, Vision, Digital Geometry Processing,</b> etc. My hobby is <b>drawing and painting,</b> with significant interests in <b>3D modelling and Game development.</b>
-								</div>
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content selected_content" id="outside_academics" onclick="select_article('academics')">
-					<div class="content_div" id="inside_academics">
-						<span class="content_icon"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.02</span>
-							<h2 class="inner_head">ACADEMICS</h2>
-							<span class="inner_title">EDUCATION</span>
-							<div class="inner_container">
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2018</span>
-											<div class="separator"></div>
-											<span>2014</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">COMPUTER SCIENCE & ENGINEERING - B.TECH.</h3>
-											<h4 class="card_content_subheader">INDIAN INSTITUTE OF TECHNOLOGY, BOMBAY <span><i class="fa fa-map-marker"></i> Mumbai</span> </h4>
-											Divided into 8 semesters with a majority of computer science courses while also covering introduction to electrical, quantum physics, economics and calculus. 
-										</div>
-									</div>
-								</div>
-								<button class="btn btn-xs btn-block" onclick="Buttons.handle_hide('extra-education')"><span class="fa fa-chevron-down extra-education"></span></button><div class="extra-education" style="display: none;">
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2014</span>
-											<div class="separator"></div>
-											<span>2012</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">RAJASTHAN BOARD (SCIENCES) - INTERMEDIATE/+2</h3>
-											<h4 class="card_content_subheader">Disha Delphi Global Sr. Sec. School, Kota<span><i class="fa fa-map-marker"></i> Kota</span> </h4>
-											Divided into 4 units with a majority of science courses of physics, chemistry and mathematics with english and hindi as the first 2 languages.
-										</div>
-									</div>
-								</div>
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2012</span>
-											<div class="separator"></div>
-											<span>2006</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">MAHARASHTRA BOARD - MATRICULATION</h3>
-											<h4 class="card_content_subheader">Don Bosco High School, Lonavla<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
-											Classes from 5<sup>th</sup> to 10<sup>th</sup> with major interests in Mathematics, Science and Arts. Language proficiency in English(primary), Hindi and Marathi.
-										</div>
-									</div>
-								</div>
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2006</span>
-											<div class="separator"></div>
-											<span>1999</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">PRIMARY AND NURSERY</h3>
-											<h4 class="card_content_subheader">St. Mary's Convent Shanti Sadan School, Lonavla<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
-											Kindergarten to class 4<sup>th</sup>. Finish off every thing for the education column.
-										</div>
-									</div>
-								</div></div>
-							</div>
-							<span class="inner_title">HONORS AND AWARDS</span>
-							<div class="inner_container">
-								<!-- <div class="two_part_card">
-										<div class="card_tag">
-											<span class="fa fa-graduation-cap"></span>
-											<div class="duration">
-												<span>2014</span>
-												<div class="separator"></div>
-												<span>2013</span>
-											</div>
-										</div>
-										<div class="card_container">
-											<div class="card_content">
-												<h3 class="card_content_header">INPhO GOLD MEDALIST</h3>
-												<h4 class="card_content_subheader">HOMI BHABHA CENTRE FOR SCIENCE EDUCATION<span><i class="fa fa-map-marker"></i> Mumbai</span> </h4>
-												For being in the top 35 students in Indian National Physics Olympiad, and participating in the qualification camp of 5 Indian representatives for International Physics Olympiad.
-											</div>
-										</div>
-								</div> -->
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2014</span>
-											<div class="separator"></div>
-											<span>2013</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">KVPY FELLOWSHIP</h3>
-											<h4 class="card_content_subheader">DEPARTMENT OF SCIENCE AND TECHNOLOGY<br> GOVERNMENT OF INDIA<span><i class="fa fa-map-marker"></i> New Delhi</span> </h4>
-											Awarded the Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship, for scoring well at its competitive exmination cum interview process. Stipend of 80,000{&#8377} per year.
-										</div>
-									</div>
-								</div>
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2010</span>
-											<div class="separator"></div>
-											<span>2009</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">IPM SCHOLARSHIP</h3>
-											<h4 class="card_content_subheader">ALL INDIA OPEN MATHEMATICS SCHOLARSHIP EXAMINATION<br> GOVERNMENT OF INDIA<span><i class="fa fa-map-marker"></i> Pune</span> </h4>
-											Awarded IPM scholarship for good performance in the All India Open Mathematics Scholarship Examination by the Institute for Promotion of Mathematics.
-										</div>
-									</div>
-								</div>
-								<button class="btn btn-xs btn-block" onclick="Buttons.handle_hide('extra-awards')"><span class="fa fa-chevron-down extra-awards"></span></button><div class="extra-awards" style="display: none;">
-								<div class="two_part_card">
-									<div class="card_tag">
-										<span class="fa fa-graduation-cap"></span>
-										<div class="duration">
-											<span>2012</span>
-											<div class="separator"></div>
-											<span>2011</span>
-										</div>
-									</div>
-									<div class="card_container">
-										<div class="card_content">
-											<h3 class="card_content_header">NAGAR PARISHAD AWARD</h3>
-											<h4 class="card_content_subheader">LONAVLA NAGAR PARISHAD<span><i class="fa fa-map-marker"></i> Lonavla</span> </h4>
-											Awarded scholarship and trophies for being the City Topper in SSC Maharashtra Secondary State Board Examination, by the ruling government body of the city.
-										</div>
-									</div>
-								</div></div>
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_achievements" onclick="select_article('achievements')">
-					<div class="content_div" id="inside_achievements">
-						<span class="content_icon"><i class="fa fa-trophy fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.03</span>
-							<h2 class="inner_head">ACHIEVEMENTS</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_resume" onclick="select_article('resume')">
-					<div class="content_div" id="inside_resume">
-						<span class="content_icon"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.04</span>
-							<h2 class="inner_head">RESUME</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_projects" onclick="select_article('projects')">
-					<div class="content_div" id="inside_projects">
-						<span class="content_icon"><i class="fa fa-flask fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.05</span>
-							<h2 class="inner_head">PROJECTS</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_interests" onclick="select_article('interests')">
-					<div class="content_div" id="inside_interests">
-						<span class="content_icon"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.06</span>
-							<h2 class="inner_head">INTERESTS</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_canvas" onclick="select_article('canvas')">
-					<div class="content_div" id="inside_canvas">
-						<span class="content_icon"><i class="fa fa-picture-o fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.07</span>
-							<h2 class="inner_head">CANVAS</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-				<article class="content" id="outside_contacts" onclick="select_article('contacts')">
-					<div class="content_div" id="inside_contacts">
-						<span class="content_icon"><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i></span>
-						<div class="inside_inner">
-							<span class="inner_before_title">.08</span>
-							<h2 class="inner_head">CONTACTS</h2>
-							<div class="inner_container">
-								
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/background.js"></script>
+			</section>
+		</section>
+	</main>
+	<!-- <script>
+		window.onload = (event) => {
+			setUpZoomForScreen()
+		}
+		// window.onresize = (event) => {
+		// 	setUpZoomForScreen()
+		// }
+		function setUpZoomForScreen() {
+			var windowWidth = window.innerWidth;
+			var screenWidth = screen.width;
+			console.log(screenWidth, windowWidth)
+			if (screenWidth < windowWidth) {
+				var ratioR = screenWidth/windowWidth
+				document.body.style.zoom = ratioR
+			} else {
+				document.body.style.zoom = 1
+			}
+		}
+	</script> -->
+	
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyCznjU3SjTvLP4swwaYu7zR_z--Fz1zGEU",
+			authDomain: "lonatown.firebaseapp.com",
+			databaseURL: "https://lonatown.firebaseio.com",
+			projectId: "lonatown",
+			storageBucket: "lonatown.appspot.com",
+			messagingSenderId: "618464199027",
+			appId: "1:618464199027:web:20b34d41b56a16f14fc506",
+			measurementId: "G-X6NKTE83NG"
+		};
+		firebase.initializeApp(firebaseConfig);
+		const db = firebase.database();
+	</script>
+	<script type="text/javascript" src="js/base.js"></script>
 </body>
 </html>
