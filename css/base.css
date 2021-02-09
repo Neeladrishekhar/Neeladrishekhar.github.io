@@ -30,7 +30,7 @@ div#section-container {
 
 body {
 	background-color: var(--backBackColor);
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 body::-webkit-scrollbar {
@@ -70,6 +70,9 @@ section::-webkit-scrollbar-thumb {
 
 main > div#section-container, main > article#priority {
 	margin-left: var(--navWidth);
+}
+main > div#section-container {
+	overflow-x: hidden;
 }
 
 main > article#priority {
@@ -125,7 +128,7 @@ main > section#overlay.forCanvas > section.content-holder > div.content > a {
 }
 
 @media only screen and (min-width: 39rem) {
-body {
+main > div#section-container {
 	overflow-x: auto;
 	overflow-y: hidden;
 }
