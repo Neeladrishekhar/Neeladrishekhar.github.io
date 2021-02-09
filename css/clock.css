@@ -1,0 +1,77 @@
+div.clock-time {
+	font-size: 2em;
+	line-height: 1.5em;
+	height: 1.5em;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	color: #28d1fa;
+	transform: translateY(0.5em);
+	display: flex;
+	justify-content: center;
+}
+div.clock-time > div {
+	font-size: 1.75em;
+	width: 0.57em;
+	height: 0.85em;
+	text-align: center;
+	margin: 0.07em;
+	border: 1px solid black;
+	border-radius: 0.14em;
+	box-shadow: 0 0 0.07em rgba(0, 0, 0, 0.5);
+	position: relative;
+	overflow: hidden;
+}
+div.clock-time > div > div::before, div.clock-time > div > div::after {
+	content: attr(data-nv);
+	position: absolute;
+	left: 0; right: 0;
+	background-color: black;
+	overflow: hidden;
+}
+div.clock-time > div > div::before {
+	top: 0;
+	bottom: 50%;
+	border-bottom: 1px solid #666;
+}
+div.clock-time > div > div::after {
+	top: 50%;
+	bottom: 0;
+	border-top: 1px solid #666;
+	line-height: 0;
+}
+div.clock-time > div > div.f::after, div.clock-time > div > div.b::before {z-index: 1;}
+div.clock-time > div > div.b::after {
+	z-index: 2;
+	transform-origin: top center;
+	transform: rotateX(0.5turn);
+}
+div.clock-time > div.changing > div.b::after {
+	animation: bDown .6s ease-in-out;
+}
+@keyframes bDown {
+	to {transform: rotateX(0);}
+}
+div.clock-time > div > div.f::before {
+	z-index: 3;
+	transform-origin: center bottom;
+}
+div.clock-time > div.changing > div.f::before {
+	backface-visibility: hidden;
+	animation: fDown .6s ease-in-out;
+}
+@keyframes fDown {
+	to {transform: rotateX(0.5turn);}
+}
+
+div.clockWrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #030e11;
+}
+div.clockWrap > div {
+	position: relative;
+}

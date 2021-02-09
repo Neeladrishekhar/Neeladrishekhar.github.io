@@ -1,0 +1,14 @@
+div.pingPongWrap {
+	width: 100%; 
+	height: 100%;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	background-color: silver;
+}
+
+.ping-pong-portriat {
+	position: absolute;
+	top: 0; left: 0;
+	font-size: 1.5rem;
+}

@@ -1,4 +1,4 @@
-(function() {
+function thatWaterFlowCanvas() {
 	function keyframe() {
 		ctx.globalCompositeOperation = "source-over";
 		ctx.fillStyle = "rgba(43,48,59,0.65)";
@@ -92,8 +92,8 @@
 		pulseId = setInterval(pulse, 5000);
 	}
 	function toresize() {
-		width = window.innerWidth;
-		height = window.innerHeight;
+		width = canvas.parentElement.offsetWidth,
+		height = canvas.parentElement.offsetHeight
 		canvas.width = width;
 		canvas.height = height;
 		mouseX = 0.5 * width;
@@ -114,6 +114,8 @@
 	} else setThisUp()
 	function setThisUp() {
 		ctx = canvas.getContext('2d');
+		width = canvas.parentElement.offsetWidth,
+		height = canvas.parentElement.offsetHeight
 		canvas.width = width;
 		canvas.height = height;
 		for (var i = 0; i < numParticles; i++) {
@@ -126,40 +128,5 @@
 		}
 		initLoader();
 	}
-
-	var loadAmount = 5
-	var nextLoad = Math.floor(Math.random()*10)
-	function percentLoadSet() {
-		loadAmount += nextLoad
-		if (loadAmount > 100) loadAmount = 100
-		setLoadPercent(loadAmount.toString()+'%')
-		if (loadAmount == 100 && doneLoad) {
-			// slide out the page
-			document.querySelector('header').style.transform = 'translateY(-100%)'
-			setTimeout(function () {
-				document.querySelector('header').style.display = 'none'
-			}, 1500)
-			document.querySelector('main').classList.remove('hideOver')
-			canvas.classList.remove('running')
-		} else {
-			if (doneLoad) {
-				nextLoad = Math.floor(Math.random()*3)
-				setTimeout(percentLoadSet, nextLoad*20)
-			}
-			else {
-				nextLoad = Math.floor(Math.random()*10)
-				setTimeout(percentLoadSet, nextLoad*100)
-			}
-		}
-	}
-	setTimeout(percentLoadSet, nextLoad*100)
-})();
-
-var doneLoad = false
-function setLoadPercent(per) {
-	if (per == 'done') {
-		doneLoad = true
-		return
-	}
-	document.getElementById('loadPercent').innerHTML = per;
 }
+// thatWaterFlowCanvas()

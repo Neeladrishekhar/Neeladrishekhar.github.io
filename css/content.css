@@ -1,0 +1,382 @@
+div#section-container > section {
+	color: var(--darkFrontShadow);
+	position: relative;
+	border-top-right-radius: 2rem;
+	padding: 1rem;
+}
+
+div#section-container > section > i.fa {
+	position: absolute;
+	margin: 1rem;
+	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	background-color: var(--primary);
+	top: 0;
+	right: 0;
+	color: var(--darkFrontColor);
+	background-color: var(--darkBackGround);
+	border-radius: 1rem;
+}
+div#section-container > section.selected > i.fa {
+	color: var(--backColor);
+	background-color: var(--primary);
+}
+
+div#section-container > section > h2 {
+	font-family: Georgia, serif;
+	text-transform: uppercase;
+	color: var(--darkFrontColor);
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+div#section-container > section > h2::after {
+	content: '';
+	display: block;
+	width: calc(0.75*(var(--navWidth)));
+	height: 2px;
+	background-color: var(--primary);
+	margin: 1rem 0;
+}
+
+div#section-container > section > div.indexHolder {
+	color: var(--primary);
+	font-size: 1.8rem;
+	margin: 1rem 0;
+}
+
+article#priority > div.priority-item {
+	font-family: Helvetica, sans-serif;
+	margin: 0 1rem;
+	font-size: 1rem;
+	line-height: var(--prioHeight);
+}
+
+div#section-container > section > article > h3 {
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	position: relative;
+	margin: 1.5rem 0 1rem 0;
+}
+div#section-container > section > article:nth-child(4) > h3 {
+	margin-top: 1rem;
+}
+div#section-container > section > article > h3::after {
+	content: '';
+	position: absolute;
+	width: .625rem;
+	height: .625rem;
+	border-right: 2px solid var(--darkFrontColor);
+	border-bottom: 2px solid var(--darkFrontColor);
+	top: 1rem;
+}
+
+div.img-intro {
+	position: relative;
+	overflow-x: hidden;
+	/* min-width: 23.25rem; */
+}
+div.img-intro > img {
+	z-index: -1;
+	filter: brightness(50%);
+	width: 100%;
+}
+div.img-intro > div.location-card {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	top: 0;
+	transform: translateX(100%);
+	transition: transform .3s ease;
+	background-color: var(--backBackColor);
+}
+div.img-intro > div.location-card > div {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	color: var(--darkBackColor);
+}
+div.img-intro > div.location-card-in {
+	transform: translateX(0);
+}
+div.img-intro > div {
+	position: absolute;
+	padding: 0.5rem;
+}
+div.img-intro > div > div {
+	color: var(--backBackColor);
+	background-color: rgba(0,0,0,0.3);
+	margin-bottom: 0.5rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+div.img-intro > div > div > i {
+	background-color: rgba(0,0,0,0.4);
+	height: inherit;
+	line-height: inherit;
+	width: 2rem;
+	text-align: center;
+}
+div.img-intro > div > div > a {
+	color: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 0 0.5rem;
+}
+div.img-intro > div.email-phone {
+	top: 0;
+}
+div.img-intro > div.location {
+	right: 0;
+	top: 0;
+}
+div.img-intro > div.location > a {
+	text-decoration: none;
+	color: var(--backBackColor);
+	background-color: rgba(0,0,0,0.5);
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+}
+div.img-intro > div.statement {
+	bottom: 0.25rem;
+	width: 100%;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--darkBackShadow);
+}
+div.img-intro > div.statement > div {
+	color: inherit;
+	margin-bottom: 0;
+	padding: 1rem;
+}
+div.img-intro > div.statement > div.info {
+	height: auto;
+	line-height: 1.5rem;
+}
+div.img-intro > div.statement > div.status {
+	padding: 0 1rem;
+	background-color: rgba(0,0,0,0.7);
+}
+div.img-intro > div.statement > div.status::before {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 0.25rem solid limegreen;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+}
+div.img-intro > div.statement > div > span {
+	color: var(--backColor);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.85rem;
+	line-height: 1rem;
+	padding-left: 5px;
+}
+span#whatAmI {
+	display: inline-block;
+}
+span#whatAmI.changing {
+	animation: swapFlip 1s ease;
+}
+@keyframes swapFlip {
+	0%, 100% {
+		transform: rotateY(0);
+	}
+	50% {
+		transform: rotateY(.25turn);
+	}
+}
+
+div.vertical-choice {
+	position: relative;
+	margin-top: 0.5rem;
+}
+div.vertical-choice > div.choices {
+	margin-left: 3rem;
+	position: absolute;
+	transform-origin: 0 0;
+	transform: rotate(90deg);
+	display: flex;
+}
+div.vertical-choice > div.choices > a {
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 2px;
+	background-color: var(--primary);
+	color: var(--backBackColor);
+	font-weight: bold;
+	letter-spacing: 2px;
+	border-radius: 0.5rem;
+}
+div.vertical-choice > div.choices > a.selected {
+	background-color: inherit;
+	color: inherit;
+	border: 1px dashed var(--darkBackShadow);
+}
+div.vertical-choice > div.content {
+	margin-left: 3rem;
+}
+
+div.time-location {
+	display: flex;
+	margin-bottom: 1rem;
+}
+div.time-location > div.left {
+	background-color: var(--primary);
+	color: var(--backColor);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 3rem;
+	border-radius: 0.5rem 0 0 0.5rem;
+}
+div.time-location > div.left > i {
+	background-color: rgba(0,0,0,0.1);
+	width: 2rem;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+	margin: 0.5rem;
+}
+div.time-location > div.left > div.time {
+	margin-top: auto;
+	font-size: 0.9rem;
+	width: 100%;
+	text-align: center;
+	padding: 0.5rem 0;
+	background-color: rgba(0,0,0,0.1);
+}
+div.time-location > div.left > div.time > div.sep {
+	width: 50%;
+	height: 1px;
+	margin: 0.25rem auto;
+	background-color: var(--backColor);
+}
+div.time-location > div.right > div.content {
+	border-radius: 0 0.5rem 0.5rem 0;
+	margin-left: 1rem;
+	position: relative;
+}
+div.time-location > div.right > div.content > h2 {
+	letter-spacing: 0px;
+}
+div.time-location > div.right > div.content > h3 > span {
+	color: var(--darkFrontShadow);
+	position: absolute;
+	right: 0;
+	margin: 1rem;
+}
+div.time-location > div.right > div.content > h3 > span > i {
+	margin-left: 0.25rem;
+}
+
+div.name-time-tag {
+	border: 1px solid var(--darkBackShadow);
+	border-radius: 0.5rem;
+	background-color: var(--backHighColor);
+	margin-top: 1rem;
+	position: relative;
+}
+div.name-time-tag > div.name-time {
+	display: flex;
+}
+
+div.name-time-tag > div.name-time > div.time {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+div.name-time-tag > div.name-time > div.time > img {
+	width: 5rem;
+	border-radius: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	position: absolute;
+	margin-bottom: 0.5rem;
+}
+div.name-time-tag > div.name-time > div.time > div {
+	background-color: var(--primary);
+	color: var(--backColor);
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 0.5rem;
+	min-width: 5.5rem;
+	margin: 0.5rem;
+}
+div.name-time-tag > div.name-time > div.time > div > h1 {
+	font-weight: normal;
+	font-size: 2.5rem;
+	padding-top: 0.5rem;
+}
+div.name-time-tag > div.name-time > div.time > div > h2 {
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+div.name-time-tag > div.name-time > div.time > div > h3 {
+	font-weight: normal;
+	font-size: 0.8rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	background-color: rgba(0,0,0,0.1);
+}
+div.name-time-tag > div.name-time > div.name {
+	padding: 1rem;
+	border-left: 1px dashed var(--darkFrontColor);
+	border-radius: 1rem;
+	line-height: 1.35rem;
+	letter-spacing: 0.5px;
+}
+div.name-time-tag > div.name-time > div.name > h2 {
+	font-weight: normal;
+	font-size: 1.5rem;
+}
+div.name-time-tag > div.name-time > div.name > h3 {
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+	text-align: right;
+	font-size: 1rem;
+}
+div.name-time-tag > div.name-time > div.name > h3 > i {
+	margin-left: 0.75rem;
+}
+div.name-time-tag > div.tag {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.25rem 0.5rem;
+	border-top: 1px dashed var(--darkFrontColor);
+	border-radius: 1rem;
+	font-size: .9rem;
+}
+div.name-time-tag > div.tag > div {
+	margin: auto 0 auto auto;
+}
+div.name-time-tag > div.tag > div > strong {
+	font-size: 1rem;
+}
+div.tag > i {
+	color: var(--backColor);
+	background-color: var(--darkBackGround);
+	font-style: normal;
+	padding: 4px 8px;
+	border-radius: 6px;
+	margin-right: 4px;
+	height: 1rem;
+	font-size: .9rem;
+}
+div.name-time-tag > div.name-time > div.detail, div.content > div.detail {
+	display: none;
+}

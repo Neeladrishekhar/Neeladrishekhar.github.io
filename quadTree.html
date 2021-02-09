@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neeladrishekhar Kanjilal</title>
+        <style>
+            .wrapper {
+                display: inline-block;
+                vertical-align: top;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;font-family:Arial;font-size:34px;letter-spacing:1px">Optimizing The Collision Detection using QuadTree</h1>
+        <p>click within square to add objects</p>
+        <div class="wrapper">
+            <canvas id="canvas" width="550" height="550" style="border:1px solid black;">
+            </canvas>
+        </div>
+        <div class="wrapper" style="font-family:Arial;font-size:15px">
+            <input id="checkbox" type="checkbox">Draw grid<br>
+            <p></p>
+            <p>Count of balls:</p>
+            <div id="ball"></div> 
+            <p></p>
+            <p>Number of checks required for collision detection count using brute force: <div id="bruteforce"></div></p>
+            <p>Number of checks required for collision detection count using quad tree: <div id="quadtree"></div></p>
+            <p>Ratio improvement in detecting collisions using quad trees over brute force: <div id="ratio"></div></p>
+            <p></p>
+        </div>
+        <script src="js/quadTree.js"></script> 
+    </body>
+</html> 

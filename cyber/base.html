@@ -8,7 +8,7 @@
 	<title>LonaTown Tech Academia</title>
 	<link rel="icon" href="imgs/logo.svg" type="image/svg+xml">
 	<link href="fontsGoogleapis.css" rel="stylesheet" type="text/css" />
-	<link href="font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="base.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -38,10 +38,10 @@
 		function setUpZoomForScreen() {
 			var windowWidth = window.innerWidth;
 			var screenWidth = screen.width;
-			console.log(screenWidth, windowWidth)
+			// console.log(screenWidth, windowWidth)
 			if (screenWidth < windowWidth) {
 				var ratioR = screenWidth/windowWidth
-				console.log(ratioR)
+				// console.log(ratioR)
 				// document.getElementsByTagName("main")[0].style.transform = "scale("+ratioR.toString()+")"
 				// document.body.style.transform = "scale("+ratioR.toString()+")"
 				document.body.style.zoom = ratioR

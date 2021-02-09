@@ -1,0 +1,283 @@
+body, h1, h2, h3, h4, ul {
+	margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+:root {font-size: 13px;}
+}
+@media only screen and (max-width: 400px) {
+:root {font-size: 10px;}
+}
+@media only screen and (max-width: 310px) {
+div#section-container {
+	min-width: 265px;
+}
+}
+:root {
+	--backBackColor: #e4e4e8;
+	--backColor: #f2f2f4;
+	--backHighColor: #f6f6f6;
+	--darkBackShadow: #aab3c6;
+	--darkBackColor: #2b303b;
+	--darkFrontShadow: #39404c;
+	--darkFrontColor: #788195;
+	--darkBackGround: #21252d;
+	--primary: #81b71a;
+	--prioHeight: 3rem;
+	--largeLimit: 32rem;
+	--navWidth: 4rem;
+}
+
+body {
+	background-color: var(--backBackColor);
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+	background: var(--darkFrontColor);
+}
+body::-webkit-scrollbar-thumb {
+	background: var(--darkBackGround);
+	border-radius: 0.25rem;
+}
+
+main.hideOver {
+	overflow: hidden;
+}
+main > div > section {
+	background-color: var(--backColor);
+	margin: 1rem 0;
+	margin-left: 1rem;
+}
+section {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+section::-webkit-scrollbar {
+	width: 3px;
+}
+section::-webkit-scrollbar-track {
+	background: var(--backColor);
+}
+section::-webkit-scrollbar-thumb {
+	background: var(--darkBackShadow);
+	border-radius: 2px;
+}
+
+main > div#section-container, main > article#priority {
+	margin-left: var(--navWidth);
+}
+
+main > article#priority {
+	background-color: var(--backColor);
+	width: calc(100vw - (var(--navWidth)));
+	height: var(--prioHeight);
+	box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.2);
+	display: flex;
+}
+
+main > section#overlay {
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed;
+	height: 100%;
+	width: calc(100vw - (var(--navWidth)));
+	margin-left: var(--navWidth);
+	display: none;
+	/* display: flex; */
+	z-index: 10;
+}
+main > section#overlay > section.content-holder {
+	margin: auto;
+	position: relative;
+	max-width: 50rem;
+	max-height: calc(100vh - (2*(var(--prioHeight))));
+	border-radius: 0.5rem;
+	padding: 0 var(--prioHeight);
+}
+main > section#overlay > section.content-holder > div.expander {
+	margin-right: var(--prioHeight);
+}
+main > section#overlay.forCanvas > section.content-holder {
+	height: 100%;
+	width: 100%;
+}
+main > section#overlay.forCanvas > section.content-holder > div.content {
+	height: calc(100% - 2.2rem);
+}
+main > section#overlay.forCanvas > section.content-holder > div.content > a {
+	position: absolute;
+	background-color: var(--primary);
+	color: var(--backHighColor);
+	width: 3rem;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.75rem;
+	text-align: center;
+	bottom: 0; right: 0;
+	margin-right: var(--prioHeight);
+	border-bottom-right-radius: 0.5rem;
+}
+
+@media only screen and (min-width: 39rem) {
+body {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+main > div > section {
+	min-width: var(--largeLimit);
+	margin-top: calc((var(--prioHeight)) + 1rem);
+	height: calc(100vh - (var(--prioHeight)) - 4rem);
+	overflow-y: auto;
+}
+main > div#section-container {
+	display: flex;
+}
+main > article#priority {
+	position: fixed;
+}
+}
+
+div.expander {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1.75rem;
+	height: 1.75rem;
+	border-left: 1px solid var(--darkBackShadow);
+	border-bottom: 1px solid var(--darkBackShadow);
+	border-radius: 0.25rem;
+	font-size: 1.125rem;
+	line-height: 1.875rem;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color .3s ease;
+	color: var(--darkBackShadow);
+}
+div.expander:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+
+header > div {
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	line-height: 6rem;
+	top: calc(50% - 3rem);
+	left: calc(50% - 3rem);
+	border-radius: 50%;
+	font-size: 2rem;
+	color: var(--backColor);
+	background-color: var(--primary);
+	box-shadow: 0 0 0 0 var(--primary);
+	animation: pulse 1s infinite;
+}
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 var(--primary);
+	}
+	90% {
+		box-shadow: 0 0 0 4rem rgba(0,0,0,0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	}
+}
+
+section[id='my canvas'] > article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+section[id='my canvas'] > article > div {
+	max-width: 14rem;
+	max-height: 14rem;
+	margin: 0.125rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+section[id='my canvas'] > article > div#pingPong {
+	max-width: 28rem;
+}
+section[id='my canvas'] > article > div > div.more,
+section[id='my canvas'] > article > div > div.more::after,
+section[id='my canvas'] > article > div::after {
+	position: absolute;
+	height: 3rem;
+	margin: auto;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+section[id='my canvas'] > article > div > div.more {
+	border: 0.125rem solid var(--backColor);
+	border-radius: 50%;
+	width: 3rem;
+	z-index: 5;
+	transition: opacity .5s ease, width .1s ease, height .1s ease;
+}
+section[id='my canvas'] > article > div > div.more::after {
+	content: '';
+	width: 2.5rem; height: 2.5rem;
+	border: 0.125rem solid var(--backColor);
+	border-radius: 50%;
+}
+section[id='my canvas'] > article > div::after {
+	content: '+';
+	text-align: center;
+	color: var(--backColor);
+	font-size: 2.5rem;
+	font-weight: bolder;
+}
+section[id='my canvas'] > article > div:hover > div.more, section[id='my canvas'] > article > div:hover::after {
+	opacity: 1;
+}
+section[id='my canvas'] > article > div > div.more:hover {
+	border: 0.25rem solid rgba(255,255,255,0.7);
+	width: 3.5rem; height: 3.5rem;
+}
+section[id='my canvas'] > article > div > div.more:hover::after {
+	opacity: 1;
+}
+section[id='my canvas'] > article > div > img {
+	width: 100%;
+	height: 100%;
+	transition: transform .5s ease;
+}
+section[id='my canvas'] > article > div:hover > img {
+	transform: scale(1.2);
+}
+section[id='my canvas'] > article > div#clock {
+	font-size: 0.45rem;
+}
+section[id='my canvas'] > article > div > h2 {
+	position: absolute;
+	bottom: 0.25rem;
+	right: 0.5rem;
+	color: var(--backColor);
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.75rem;
+	font-weight: normal;
+	background-color: rgba(0,0,0,0.8);
+}
+section[id='my canvas'] > article > div > div.darken {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0; left: 0;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+section[id='my canvas'] > article > div:hover > div.darken {
+	opacity: 1;
+}

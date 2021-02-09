@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Ubuntu', sans-serif;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+	color: #ecf4f3;
+	background-color: #43658b;
+	padding: 2rem;
+	width: 100%;
+	text-align: center;
+}
+header h1 {
+	margin-bottom: 2rem;
+	font-size: 2.5rem;
+}
+header p {
+	font-size: 1rem;
+}
+
+main {
+	font-family: 'Grandstander', cursive;
+	color: #ecf4f3;
+	background-color: #4e89ae;
+	padding: 1rem;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+main section#viewer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+main section#inputData {
+	position: absolute;
+	margin: 0 1rem;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+
+section#viewer h3 {
+	margin: 1rem 0;
+}
+section#viewer svg {
+	overflow: visible;
+	flex-grow: 1;
+	z-index: 1;
+}
+
+section textarea {
+	background-color: rgba(179, 219, 241, .3);
+}
+section textarea::selection {
+	background-color: black;
+	color: white;
+}
+section textarea.incorrect {
+	border-color: red;
+	outline-color: red;
+}
+
+footer {
+	background-color: #ed6663;
+	/* padding: 1rem 0; */
+	width: 100%;
+	display: flex;
+}
+
+footer div {
+	height: 1rem;
+	border: 0.25rem solid black;
+	flex-grow: 1;
+	/* margin: 0 1rem; */
+}
+
+.draggable {
+	cursor: move;
+}
+
+.color1 {
+	fill: #dddf00;
+	stroke: #f94144;
+	background-color: #dddf00;
+	border-color: #f94144;
+}
+
+.color7 {
+	fill: #dc2f02;
+	stroke: #370617;
+	background-color: #dc2f02;
+	border-color: #370617;
+}
+
+.color6 {
+	fill: #dda15e;
+	stroke: #1d2711;
+	background-color: #dda15e;
+	border-color: #1d2711;
+}
+
+.color5 {
+	fill: #e5e5e5;
+	stroke: #14213d;
+	background-color: #e5e5e5;
+	border-color: #14213d;
+}
+
+.color4 {
+	fill: #b5838d;
+	stroke: #03045e;
+	background-color: #b5838d;
+	border-color: #03045e;
+}
+
+.color3 {
+	fill: #fca311;
+	stroke: #14213d;
+	background-color: #fca311;
+	border-color: #14213d;
+}
+
+.color2 {
+	fill: #ed6663;
+	stroke: #ffe656;
+	background-color: #ed6663;
+	border-color: #ffe656;
+}

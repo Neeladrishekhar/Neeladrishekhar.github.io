@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SVG Graph viewer</title>
+	<link rel="stylesheet" href="base.css">
+	<link rel="stylesheet" href="Grandstander_Ubuntu.css">
+</head>
+<body>
+	<header>
+		<h1>SVG Graph Viewer</h1>
+		<p>Drag the nodes to move it around</p>
+		<p>Change the 'Graph Data' to change the nodes</p>
+	</header>
+	<main>
+		<section id="viewer">
+			<h3>Look at this awesome Graph here SVG</h3>
+			<svg id="graphSvg">
+				<defs>
+					<!-- arrowhead marker definition -->
+					<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+						markerWidth="6" markerHeight="6"
+						orient="auto-start-reverse">
+					  <path d="M 0 1 L 10 5 L 0 9 L 3 5 z" />
+					</marker>
+				</defs>
+				Sorry your browser doesn't support inline SVG
+			</svg>
+		</section>
+		<section id="inputData">
+			<h3>Graph Data:</h3>
+			<textarea name="graphData" id="graphData" rows="10"></textarea>
+		</section>
+	</main>
+	<footer>
+	</footer>
+	<script src="data.js"></script>
+	<script src="base.js"></script>
+</body>
+</html>

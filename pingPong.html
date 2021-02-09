@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neeladrishekhar Kanjilal</title>
+	<style>
+		body {
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: silver;
+			position: relative;
+		}
+	</style>
+	<link rel="stylesheet" href="css/pingPong.css">
+</head>
+<body>
+	<select name="mode" class="ping-pong-portriat running">
+		<option value="portrait">Portrait</option>
+		<option value="landscape">Landscape</option>
+	</select>
+	<canvas class="ping-pong running"></canvas>
+	<script type="text/javascript" src="js/pingPong.js"></script>
+	<script>thatPingPongCanvas()</script>
+</body>
+</html>
