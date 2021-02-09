@@ -44,7 +44,7 @@ div#section-container > section > h2::after {
 div#section-container > section > div.indexHolder {
 	color: var(--primary);
 	font-size: 1.8rem;
-	margin: 1rem 0;
+	margin: .9rem 0;
 }
 
 article#priority > div.priority-item {
@@ -213,7 +213,7 @@ div.vertical-choice > div.choices > a {
 	text-transform: uppercase;
 	text-decoration: none;
 	display: inline-block;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem .9rem;
 	margin: 0.5rem 2px;
 	background-color: var(--primary);
 	color: var(--backBackColor);
