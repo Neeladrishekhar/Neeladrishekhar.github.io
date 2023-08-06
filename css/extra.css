@@ -28,7 +28,7 @@ div.content > div.forIframe {
 	height: 0;
 	padding-bottom: 55%;
 }
-div.content > div > iframe{
+div.content > div > iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -61,7 +61,7 @@ div.content > div.skill > div.amount {
 	line-height: 4.5rem;
 	font-size: 1.5rem;
 	text-align: center;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 0.5rem 0 0 0.5rem;
 }
 div.content > div.skill > div.info {
@@ -82,7 +82,7 @@ div.content > div.skill > div.info > div.level > div {
 div.content > div.skill > div.info > div.fillbar {
 	margin: 0.5rem 0;
 	height: 3px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 div.content > div.skill > div.info > div.fillbar > div.bar {
 	width: 90%;
@@ -90,7 +90,7 @@ div.content > div.skill > div.info > div.fillbar > div.bar {
 	background-color: var(--backColor);
 }
 div.content > div.skill > div.info > div.skillTag > i {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 	font-size: 0.75rem;
 	padding: 0.25rem 0.5rem;
 }
@@ -103,7 +103,7 @@ div.LR-control > div.info {
 	color: var(--backColor);
 	display: flex;
 	flex-grow: 1;
-	font-weight: bold;
+	/* font-weight: bold; */
 	/* height: 2.5rem; */
 	line-height: 2.5rem;
 	border-radius: 0.5rem;
@@ -114,11 +114,12 @@ div.LR-control.small > div.info {
 	line-height: 1.5rem;
 }
 div.LR-control > div.info > div.indexing {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 0.5rem 0 0 0.5rem;
 	min-width: 1.875rem;
 }
-div.LR-control > div > div, div.LR-control > div > i {
+div.LR-control > div > div,
+div.LR-control > div > i {
 	padding: 0 1rem;
 	overflow: visible;
 }
@@ -147,12 +148,12 @@ div.LR-control > div.right-dir > i {
 div.LR-holder > div.LR-wrap {
 	margin-top: 1rem;
 	display: flex;
-	transition: transform .3s ease;
+	transition: transform 0.3s ease;
 }
 div.LR-wrap > div.title-content {
 	min-width: 100%;
 	opacity: 0;
-	transition: opacity .3s ease;
+	transition: opacity 0.3s ease;
 }
 div.LR-wrap > div.look {
 	opacity: 1;
@@ -176,10 +177,10 @@ div.LR-wrap > div.title-content > div.title > h3 {
 	color: var(--primary);
 }
 @media only screen and (max-width: 35rem) {
-div.LR-wrap > div.title-content > div.title > h3 {
-	right: 0;
-	top: -1.5rem;
-}
+	div.LR-wrap > div.title-content > div.title > h3 {
+		right: 0;
+		top: -1.5rem;
+	}
 }
 div.LR-wrap > div.title-content > div.content {
 	border-radius: 0 0 0.5rem 0.5rem;
@@ -209,26 +210,26 @@ section#contact > article {
 	flex-direction: column;
 	align-items: center; */
 }
-section#contact > article >  h1 {
+section#contact > article > h1 {
 	font-size: 1.75rem;
 	font-weight: normal;
 	text-transform: uppercase;
 	color: var(--primary);
 	line-height: 2rem;
 }
-section#contact > article >  h1::after {
-	content: '';
+section#contact > article > h1::after {
+	content: "";
 	display: inline-block;
 	margin: 0.5rem 0;
 	width: 30%;
 	height: 1px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 }
-section#contact > article >  h2 {
+section#contact > article > h2 {
 	font-size: 1.25rem;
 	font-weight: normal;
 }
-section#contact > article >  h4 {
+section#contact > article > h4 {
 	font-weight: normal;
 	margin: 0.5rem 0;
 }
@@ -238,35 +239,37 @@ section#contact > article > div {
 	align-items: center;
 }
 section#contact > article > div::before {
-	content: '';
+	content: "";
 	display: block;
 	width: 30%;
 	height: 1px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 	margin: 1rem 0;
 }
-section#contact > article > div > input, section#contact > article > div > textarea {
+section#contact > article > div > input,
+section#contact > article > div > textarea {
 	max-width: calc(100% - 4rem);
 	width: calc(100% - 4rem);
 	padding: 1rem;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	margin: 0.25rem 1rem;
 	outline: none;
-	border: 1px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 0.5rem;
 }
-section#contact > article > div > input:focus, section#contact > article > div > textarea:focus {
-	border-color: rgba(0,0,0,0.4);
+section#contact > article > div > input:focus,
+section#contact > article > div > textarea:focus {
+	border-color: rgba(0, 0, 0, 0.4);
 }
 section#contact > article > div > input[type="submit"] {
 	width: auto;
 	text-transform: uppercase;
 	color: var(--darkFrontColor);
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
 section#contact > article > div > input[type="submit"]:hover {
 	cursor: pointer;
-	background-color: rgba(0,0,0,0.05);
+	background-color: rgba(0, 0, 0, 0.05);
 }
 section#contact > article > div > div.info {
 	width: 100%;
@@ -295,7 +298,7 @@ div.loading > div {
 	width: 2rem;
 	height: 2rem;
 	background-color: var(--backColor);
-	border: 3px solid rgba(0,0,0,0.03);
+	border: 3px solid rgba(0, 0, 0, 0.03);
 	border-radius: 50%;
 }
 div.loading > div:nth-child(1) {
@@ -327,34 +330,58 @@ div.loading > div:nth-child(4) {
 	}
 }
 @keyframes oneforth {
-	0%, 12.5%, 87.5%, 100% {
+	0%,
+	12.5%,
+	87.5%,
+	100% {
 		border-left-color: var(--primary);
 	}
-	17.5%, 82.5% {
-		border-left-color: rgba(0,0,0,0.03);
+	17.5%,
+	82.5% {
+		border-left-color: rgba(0, 0, 0, 0.03);
 	}
 }
 @keyframes twoforth {
-	12.5%, 25%, 75%, 87.5% {
+	12.5%,
+	25%,
+	75%,
+	87.5% {
 		border-right-color: var(--primary);
 	}
-	0%, 7.5%, 30%, 70%, 92.5%, 100% {
-		border-right-color: rgba(0,0,0,0.03);
+	0%,
+	7.5%,
+	30%,
+	70%,
+	92.5%,
+	100% {
+		border-right-color: rgba(0, 0, 0, 0.03);
 	}
 }
 @keyframes thrforth {
-	25%, 37.5%, 62.5%, 75% {
+	25%,
+	37.5%,
+	62.5%,
+	75% {
 		border-left-color: var(--primary);
 	}
-	0%, 20%, 42.5%, 57.5%, 80%, 100% {
-		border-left-color: rgba(0,0,0,0.03);
+	0%,
+	20%,
+	42.5%,
+	57.5%,
+	80%,
+	100% {
+		border-left-color: rgba(0, 0, 0, 0.03);
 	}
 }
 @keyframes forforth {
-	37.5%, 62.5% {
+	37.5%,
+	62.5% {
 		border-right-color: var(--primary);
 	}
-	0%, 67.5%, 32.5%, 100% {
-		border-right-color: rgba(0,0,0,0.03);
+	0%,
+	67.5%,
+	32.5%,
+	100% {
+		border-right-color: rgba(0, 0, 0, 0.03);
 	}
 }
